@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap');
+
+/*---------------------------------------------Font & Colours-----*/
+
+* {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+
+
+/*---------------------------------------------Background-----*/
+
+body {
+    height: 100vh;
+    background: transparent;
+}
+
+html {
+    background: url("../img/background_1_crop2.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    background-position: 0 0;
+}
+
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: -1;
+
+    padding: 0;
+    margin: 0;
+    
+}
+
+/*---------------------------------------------Logo-----*/
+
+
+
+/*---------------------------------------------NavBar-----*/
+
+.nav-mainpage {
+    display: block;
+}
+
+.logo-nav {
+    width: 150px;
+    padding-left: 25px;
+    margin: 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.navbar-links-container {
+    width: calc(100vw - 250px); /*Learnt this from reel big fish website - need to fully understand it!) */
+    display: inline-block;
+    box-sizing: border-box;
+    height: 75px;
+}
+
+.menu-container {
+    height: 55px;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    padding-top: 5px;
+
+}
+
+.menu-item {
+    display: inline-block;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.menu-item a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.menu-item a:hover {
+    font-size: 120%;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-container {
+    display: inline-block;
+    float: right;
+    margin: 10px 0;
+}
+
+.social-container > span {
+    height: 50px;
+    width: 50px;
+    background-color: #525252; 
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    padding-top: 5px;
+    
+}
+
+.social-container a {
+    font-size: 30px;
+    
+}
