@@ -1,42 +1,41 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Diddy vs The Kingdom
 
-Welcome mattb0101,
+First milestone project for the Full Stack Developer course with the code institute. This is based on a new band that i am a part of. The project has to be written in HTML and CSS, and there is the option of using Bootstrap and other frameworks or libraries.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+## Mandatory Points
 
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+1. Static front end
+    - Custom HTML5 and CSS3 to create a website of at least 3 pages.
+2. Information Architecture
+    - Main Navigation menu and Structured layout.
+3. Documentation
+    - README.md file
+4. Version Control
+    - Git and GitHub for version Control
+5. Attribution
+    - Maintain clear seperation between user and External
+6. Deployment
+    - Deploy final version to hosting platform.
 
 
-<a href="https://www.vecteezy.com/free-vector/paint-brush-stroke">Paint Brush Stroke Vectors by Vecteezy</a> - This is for brush strokes 
+### Description
+
+The project is a webpage to promote the band, give some information about the band and members, linking to social media and ability to contact.
+
+##### Landing
+
+Starting with a landing page type screen. This initially was going to be a home page, with a carousel of images and information about the band. This got changed to be a static landing page, with the bands name/logo in the centre of the page, a tagline, and then with a navbar at the top to go to the main parts of the site. Social media links to the bands pages.
+
+##### The band
+
+Similar to an about me, the band page will have a brief intro of the band along with a screen that will tell you about the members of the band. Currently this is designed a little bit like the Mario Kart selection screen.
+
+##### Photos
+
+-
+
+
+
+## Frameworks
+
+I have used some bootstrap in this for columns and rows, font awesome and font and 

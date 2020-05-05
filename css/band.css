@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap');
 
-html {
+/* html {
     background: url("../img/full_band_crop.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -9,7 +9,7 @@ html {
     background-size: cover;
 
     background-position: 0 75px;
-}
+} */
 
 .nav-mainpage {
     display: block;
@@ -23,25 +23,75 @@ html {
 /*---------------------------------------------Band Info-----*/
 
 .container-band {
-    height: 100px;
+    height: 225px;
+    margin-bottom: 25px;
 }
 
 .info {
     height: 100px;
     text-align: center;
+    padding-left: 175px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    font-size: 23px;
+
 }
 
 
 /*---------------------------------------------Band Members-----*/
 
 .char-select {
-    height: 75vh;
-    width: 50%;
+    height: 50vh;
+    width: 40vw;
     left: 10%;
     background-color: rgba(174, 167, 167, 0.5);
     position: relative;
     border: 4px inset rgb(174, 167, 167);
     border-radius: 2%;
+    
+    padding: 0;
+    margin: 0;
+}
+
+.char-select .row{
+    height: 30%;
+    margin: 2% 0 0 0;
+    width: 100%;
+    padding: 0;
+}
+
+.char-select .col-4 {
+    text-align: center;  
+    position: relative;
+}
+
+.member-dave {
+    background-image: url("../img/dave/dave-2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.member-dave:hover {
+    background-image: url("../img/dave/dave-1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 10px;
+    left: 5px;
+    transform: rotate(20deg);
+}
+
+
+
+
+/*---------------------------------------------Footer-----*/
+
+Footer {
+    background-color: #000;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #fff;
 }
 
 
