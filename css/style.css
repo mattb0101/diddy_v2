@@ -7,10 +7,15 @@
     color: #fff;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: "Josefin Sans", sans-serif;
+    font-family: "Josefin Sans", cursive;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 
@@ -20,145 +25,105 @@ body {
 body {
     height: 100vh;
     width: 100vw;
-    background: transparent;
-    position: fixed;
-}
-
-html {
-    background: url("../img/background_1_crop2.jpg") no-repeat center center fixed;
+    background-image: linear-gradient(60deg, rgba(228, 21, 21, 0.3), rgba(0, 0, 0, 0.5) 30%),
+                    linear-gradient(-60deg, rgba(8, 88, 8, 0.8),  rgba(0, 0, 0, 0.5) 30%), url("../img/background_1_crop2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 
-    background-position: 0 0;
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: 100px 1fr auto;
 }
 
-.opaque-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.6);
-    z-index: -1;
 
-    padding: 0;
-    margin: 0;
-    
+/*---------------------------------------------Grid Layout-----*/
+
+header {
+    display: grid;
+    grid-area: header;
+    grid-template-columns: auto 1fr 15%;
+    align-items: center;
+    padding-left: 15px;
 }
 
-/*---------------------------------------------Logo-----*/
+main {
+    display: grid;
+    grid-area: main;
+    align-items: top;
+    justify-items: center;
+}
 
 
 
 /*---------------------------------------------NavBar-----*/
 
-.nav-mainpage {
-    display: block;
-}
-
 .logo-nav {
     width: 150px;
-    padding-left: 25px;
-    margin: 0;
-    display: inline-block;
-    box-sizing: border-box;
+    overflow: auto;
+    padding-top: 60px;
 }
 
-.navbar-links-container {
-    width: calc(100vw - 250px); /*Learnt this from reel big fish website - need to fully understand it!) */
-    display: inline-block;
-    box-sizing: border-box;
-    height: 75px;   
+nav {
+    padding-left: 20px;
 }
 
-.menu-container {
-    height: 55px;
-    margin: 10px 0px;
-    box-sizing: border-box;
-    float: left;
-    vertical-align: middle;
-}
 
 .menu-list {
     list-style: none;
-    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: flex-start;
+    column-gap: 40px;
+    align-items: center;
     margin: 0;
-    display: inline-block;
-    vertical-align: middle;
-    top: 0;
-    position: fixed;
 }
 
-.menu-item {
-    display: inline-block;
-    padding: 10px;
-    margin-left: 20px;
-    line-height: 50px;
-    width: 70px;    
-}
 
 .menu-item a {
-    color: #fff;
+    display: inline-block;
+    color: #f7f8fa;
     text-transform: uppercase;
-    vertical-align: middle;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
 }
 
 .menu-item a:hover {
-    font-size: 120%;
-    text-decoration: none;
-    font-weight: bold;
-    overflow: hidden;
-}
-
-.social-container {
-    display: inline-block;
-    float: right;
-    margin: 10px 0;
+    transform: scale(1.2);
+    color: #f74b45;
+    
 }
 
 .social-container a i {
     height: 50px;
     width: 50px;
-    background-color: #525252; 
     border-radius: 50%;
     display: inline-block;
     text-align: center;
     margin-left: 10px;
     padding: 10px 0;
-    color: #fff;
+    color: #f7f8fa;
     font-size: 28px;
     position: relative;
 }
 
-.facebook {
-    animation-name: entry;
-    animation-duration: 0.5s;
-
-}
-
+.facebook,
 .instagram {
-    animation-name: entry;
-    animation-duration: 0.7s;
-
+    background: linear-gradient(180deg, #706e6e, #292828);
 }
 
-@keyframes entry {
-    0% {left:1000px;}
-    100% {left:0px;}
+.facebook:hover {
+	background: linear-gradient(180deg, #16a4fb, #0164e1);
+}
+.instagram:hover {
+	background: linear-gradient(180deg, #fdd628, #b401e1);
 }
 
-.social-container a i:hover {
-    background-color: #fff;
-    color: #000;
-
-     transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-}
-
+/*
 @media only screen and (max-width: 576px) {
         .logo-nav {
         display: none;
@@ -182,6 +147,7 @@ html {
         left: 5vw;
     }
 
-}
+} 
 
+*/
 

@@ -1,28 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap');
 
-/* html {
-    background: url("../img/full_band_crop.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-    background-position: 0 75px;
-} */
-
-.nav-mainpage {
+/* .nav-mainpage {
     display: block;
     background-color: #000;
     max-height: 75px;
     padding: 0;
     margin: 0;
     border-bottom: 1px solid #fff;
+} */
+
+header {
+    background-color: #b30409;
 }
 
 /*---------------------------------------------Band Info-----*/
 
-.container-band {
+/* .container-band {
     height: 225px;
     margin-bottom: 25px;
 }
@@ -35,12 +29,12 @@
     box-sizing: border-box;
     font-size: 23px;
 
-}
+} */
 
 
 /*---------------------------------------------Band Members-----*/
 
-.char-select {
+/* .char-select {
     height: 50vh;
     width: 40vw;
     left: 10%;
@@ -78,86 +72,21 @@
     top: 10px;
     left: 5px;
     transform: rotate(20deg);
-}
+} */
 
 
 
 
 /*---------------------------------------------Footer-----*/
 
-Footer {
+/* Footer {
     background-color: #000;
     height: 50px;
     position: fixed;
     bottom: 0;
     width: 100%;
     border-top: 1px solid #fff;
-}
-
-
-/*---------------------------------------------Picture Cards-----*/
-
-/* .container-picture {
-    position: relative;
-    height: 700px;
-}
-
-.container-picture .picture {
-    position: absolute;
-    border: 1px solid #000;
-    background-color: white;
-    padding: 15px 15px 60px 15px;
-    box-shadow: 5px 10px 10px darkgrey;
-}
-
-.container-picture img {
-    height: 200px;
-    width: 200px;
-}
-
-.container-picture .dave {
-    top: 100px;
-    left: 100px;
-}
-
-.container-picture .will {
-    top: 300px;
-    left: 150px;
-}
-
-.container-picture .matt-s {
-    top: 0px;
-    left: 200px;
-}
-
-.container-picture .ryan {
-    top: 100px;
-    left: 80%;
-}
-
-.container-picture .belle {
-    top: 100px;
-    left: 100px;
-}
-
-.container-picture .megan {
-    top: 0;
-    left: 34%;
-}
-
-.container-picture .gary {
-    top: 100px;
-    left: 100px;
-}
-
-.container-picture .laurie {
-    top: 100px;
-    left: 100px;
-}
-
-.container-picture .matt-b {
-    top: 58%;
-    left: 30%;
 } */
+
 
 
