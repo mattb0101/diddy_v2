@@ -28,6 +28,10 @@
     border-bottom: 2px solid #f7f8fa;
 }
 
+footer {
+    display: none;
+}
+
 /*
 
 @media only screen and (max-width: 576px) {

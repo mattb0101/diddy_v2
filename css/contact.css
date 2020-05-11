@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap');
+
+main {
+    align-content: center;
+}
+
+.contact-header {
+
+    font-size: 38px;
+}
+
+.contact-form {
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+}
+
+form  {
+    background-color: #fff;
+    border: 2px inset grey;
+}
+
+form * {
+    width: 80%;
+    margin: 25px;
+}
