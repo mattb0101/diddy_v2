@@ -14,16 +14,15 @@ background-size: 40px 60px;
 border-bottom: 5px ridge #f5e1e1f6;
 }
 
-footer {
-    background: #000;
-}
-
 main {
     grid-template-rows: 150px auto;
     grid-template-columns: 1fr 1fr;
 
-    align-items: center;
-    
+    align-items: center; 
+}
+
+footer {
+    background: #000;
 }
 
 /*---------------------------------------------Band Info-----*/
@@ -54,61 +53,129 @@ main {
 
 .band-member-select {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 21%)) 37%;
     grid-template-rows: repeat(3, minmax(0, 1fr));
     column-gap: 5px;
     row-gap: 5px;
     height: 60vmin;
-    width: 60vmin;
-    left: 10%;
+    width: 70vw;
     position: relative;
     background-color: rgba(174, 167, 167, 0.5);
     border: 4px inset rgb(174, 167, 167);
     border-radius: 2%;
     align-items: center;
     padding: 20px;
-
+    grid-column: 1 / span 2;
 }
-
 
 .band-member {
     align-items: center;
     justify-content: center;
-
+    width: 100%;
     border-radius: 5%
 }
+
+.member-name {
+    padding-bottom: 50%;
+}
+
+
+                /*-----------Grid Area Alignment------------*/
+
+/* .band-member .dave {grid-area: 1 / 1 / 2 / 2;}
+.band-member .will {grid-area: 1 / 2 / 2 / 3;}
+.band-member .ryan {grid-area: 1 / 3 / 2 / 4;}
+.band-member .matt-s {grid-area: 2 / 1 / 3 / 2;}
+.band-member .belle {grid-area: 2 / 2 / 3 / 3;}
+.band-member .gary {grid-area: 2 / 3 / 3 / 4;}
+.band-member .megan {grid-area: 3 / 1 / 4 / 2;}
+.band-member .laurie {grid-area: 3 / 2 / 4 / 3;}
+.band-member .matt-b {grid-area: 3 / 3 / 4 / 4;} */
+
+.full-image {grid-area: 1 / 4 / 3 / 5;}
+.member-name {grid-area: 3 / 4 / 4 / 5;}
+.member-info {grid-area: 3 / 4 / 4 / 5;}
+
+/*---------------------------------------------Selection Change-----*/
 
 .band-member:hover {
     background-color: rgba(174, 167, 167, 0.233);
 }
 
-main .band-member:hover  main .member-name span {
-    visibility: hidden;
+.band-member:hover ~ .member-name span {
+    display: none;
 }
+
+.band-member:hover ~ .member-info span {
+    display: none;
+}
+
+.dave:hover ~ .member-name:after {content: 'Dave';}
+.will:hover ~ .member-name:after {content: 'Will';}
+.ryan:hover ~ .member-name:after {content: 'Ryan';}
+.matt-s:hover ~ .member-name:after {content: 'Matt S';}
+.belle:hover ~ .member-name:after {content: 'Belle';}
+.gary:hover ~ .member-name:after {content: 'Gary';}
+.megan:hover ~ .member-name:after {content: 'Megan';}
+.laurie:hover ~ .member-name:after {content: 'Laurie';}
+.matt-b:hover ~ .member-name:after {content: 'Matt B';}
+
+.dave:hover ~ .member-info:after {content: "Dave is a bit of a bellend...";}
+.megan:hover ~ .member-info:after {content: "Megan ain't all that bad...compared to Dave";}
+
+.dave:hover ~ .full-image {
+    background: url("../img/dave/dave-3-crop.jpg") no-repeat;
+    background-size: cover;
+}
+
+.megan:hover ~ .full-image {
+    background: url("../img/megan/megan_cropped.jpg") no-repeat;
+    background-size: cover;
+}
+
+
+/* main .band-member:hover  main .member-name span {
+    visibility: hidden;
+} */
 
 .band-member:hover img {
     transform: scale(1.2) 
 }
 
-.selected-member {
+/* .selected-member {
     display: grid;
     grid-template-rows: auto 75px 150px;
     height: 100%;
     width: 100%;
     justify-items: center;
     padding: 25px 0;
-}
+} */
  
+
 .full-image {
-    max-height: 100%;
-    
+    display: inline-block;
+    height: 100%;
+    background: url("../img/mario_question.jpg") no-repeat;
+    background-size: cover;
+    border: 10px solid rgb(174, 167, 167);
+    border-radius: 50%;
 }
 
-.full-image img {
-    max-height: 100%;
+/* .full-image {
+    height: 100px;
+    width: 100px; 
+    position: relative;
+    display: inline-block;   
     border-radius: 50%;
     border: 10px solid rgb(174, 167, 167);
-}
+} */
+
+
+/* .full-image .dave-img {
+    position: absolute;
+    display: none;
+    z-index: 99;
+} */
 
 .member-name {
     margin: auto;
