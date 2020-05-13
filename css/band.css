@@ -16,7 +16,7 @@ border-bottom: 5px ridge #f5e1e1f6;
 
 main {
     grid-template-rows: 150px auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 
     align-items: center; 
 }
@@ -33,73 +33,80 @@ footer {
     padding: 0 25%;   
 }
 
-/* .container-band {
-    height: 225px;
-    margin-bottom: 25px;
-}
-
-.info {
-    height: 100px;
-    text-align: center;
-    padding-left: 175px;
-    padding-top: 20px;
-    box-sizing: border-box;
-    font-size: 23px;
-
-} */
-
 
 /*---------------------------------------------Band Members-----*/
 
 .band-member-select {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 21%)) 37%;
-    grid-template-rows: repeat(3, minmax(0, 1fr));
-    column-gap: 5px;
-    row-gap: 5px;
-    height: 60vmin;
-    width: 70vw;
+    display: inline-grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(3, auto);
+    column-gap: 1vmin;
+    row-gap: 1vmin;
+    width: auto;
+    max-width: 100vw;
     position: relative;
     background-color: rgba(174, 167, 167, 0.5);
     border: 4px inset rgb(174, 167, 167);
     border-radius: 2%;
-    align-items: center;
-    padding: 20px;
+    padding: 2vmin;
     grid-column: 1 / span 2;
 }
 
-.band-member {
+.band-member,
+.full-image {
     align-items: center;
     justify-content: center;
-    width: 100%;
-    border-radius: 5%
+    width: 19vmin;
+    height: 19vmin;
+    border-radius: 5%;
+    display: flex;
 }
 
-.member-name {
-    padding-bottom: 50%;
+.full-image {
+    height: calc(2 * 19vmin);
+    width: calc(2 * 19vmin);
+    background: url("../img/mario_question.jpg") no-repeat;
+    background-size: cover;
+    border: 10px solid rgb(174, 167, 167);
+    border-radius: 50%;
+}
+
+.band-member img {
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+}
+
+.blank-column {
+    width: 10vmin;
+    grid-area: 1 / 4 / 4 / 5;
 }
 
 
                 /*-----------Grid Area Alignment------------*/
+.band-member.dave {grid-area: 1 / 1 / 2 / 2;}
+.band-member.will {grid-area: 1 / 2 / 2 / 3;}
+.band-member.ryan {grid-area: 1 / 3 / 2 / 4;}
+.band-member.matt-s {grid-area: 2 / 1 / 3 / 2;}
+.band-member.belle {grid-area: 2 / 2 / 3 / 3;}
+.band-member.gary {grid-area: 2 / 3 / 3 / 4;}
+.band-member.megan {grid-area: 3 / 1 / 4 / 2;}
+.band-member.laurie {grid-area: 3 / 2 / 4 / 3;}
+.band-member.matt-b {grid-area: 3 / 3 / 4 / 4;}
 
-/* .band-member .dave {grid-area: 1 / 1 / 2 / 2;}
-.band-member .will {grid-area: 1 / 2 / 2 / 3;}
-.band-member .ryan {grid-area: 1 / 3 / 2 / 4;}
-.band-member .matt-s {grid-area: 2 / 1 / 3 / 2;}
-.band-member .belle {grid-area: 2 / 2 / 3 / 3;}
-.band-member .gary {grid-area: 2 / 3 / 3 / 4;}
-.band-member .megan {grid-area: 3 / 1 / 4 / 2;}
-.band-member .laurie {grid-area: 3 / 2 / 4 / 3;}
-.band-member .matt-b {grid-area: 3 / 3 / 4 / 4;} */
-
-.full-image {grid-area: 1 / 4 / 3 / 5;}
-.member-name {grid-area: 3 / 4 / 4 / 5;}
-.member-info {grid-area: 3 / 4 / 4 / 5;}
+.full-image {grid-area: 1 / 5 / 3 / 6;}
+.member-name {grid-area: 3 / 5 / 4 / 6;}
+.member-info {grid-area: 3 / 5 / 4 / 6;}
 
 /*---------------------------------------------Selection Change-----*/
 
 .band-member:hover {
     background-color: rgba(174, 167, 167, 0.233);
+}
+
+.band-member:hover img {
+    transform: scale(1.2) 
 }
 
 .band-member:hover ~ .member-name span {
@@ -121,7 +128,7 @@ footer {
 .matt-b:hover ~ .member-name:after {content: 'Matt B';}
 
 .dave:hover ~ .member-info:after {content: "Dave is a bit of a bellend...";}
-.megan:hover ~ .member-info:after {content: "Megan ain't all that bad...compared to Dave";}
+.megan:hover ~ .member-info:after {content: "Megan ain't all that bad...";}
 
 .dave:hover ~ .full-image {
     background: url("../img/dave/dave-3-crop.jpg") no-repeat;
@@ -133,88 +140,18 @@ footer {
     background-size: cover;
 }
 
-
-/* main .band-member:hover  main .member-name span {
-    visibility: hidden;
-} */
-
-.band-member:hover img {
-    transform: scale(1.2) 
-}
-
-/* .selected-member {
-    display: grid;
-    grid-template-rows: auto 75px 150px;
-    height: 100%;
-    width: 100%;
-    justify-items: center;
-    padding: 25px 0;
-} */
- 
-
-.full-image {
-    display: inline-block;
-    height: 100%;
-    background: url("../img/mario_question.jpg") no-repeat;
-    background-size: cover;
-    border: 10px solid rgb(174, 167, 167);
-    border-radius: 50%;
-}
-
-/* .full-image {
-    height: 100px;
-    width: 100px; 
-    position: relative;
-    display: inline-block;   
-    border-radius: 50%;
-    border: 10px solid rgb(174, 167, 167);
-} */
-
-
-/* .full-image .dave-img {
-    position: absolute;
-    display: none;
-    z-index: 99;
-} */
-
 .member-name {
-    margin: auto;
     text-transform: uppercase;
     font-family: "Luckiest Guy", sans-serif;
     font-weight: bold;
     font-size: 55px;
+    align-self: start;
+    text-align: center;
 }
 
 .member-info {
     margin: auto;
 }
-
-
-
-
-
- /*
-.char-select .col-4 {
-    text-align: center;  
-    position: relative;
-}
-
-.member-dave {
-    background-image: url("../img/dave/dave-2.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.member-dave:hover {
-    background-image: url("../img/dave/dave-1.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 10px;
-    left: 5px;
-    transform: rotate(20deg);
-} */
-
-
 
 
 /*---------------------------------------------Footer-----*/
