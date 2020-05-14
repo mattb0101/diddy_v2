@@ -65,8 +65,7 @@ footer {
 .full-image {
     height: calc(2 * 19vmin);
     width: calc(2 * 19vmin);
-    background: url("../img/mario_question.jpg") no-repeat;
-    background-size: cover;
+    background-color: rgba(174, 167, 167, 0.5); 
     border: 10px solid rgb(174, 167, 167);
     border-radius: 50%;
 }
@@ -107,6 +106,10 @@ footer {
 
 .band-member:hover img {
     transform: scale(1.2) 
+}
+
+.band-member:hover ~ .full-image span {
+    display: none;
 }
 
 .band-member:hover ~ .member-name span {

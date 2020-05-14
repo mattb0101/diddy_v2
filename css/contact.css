@@ -15,11 +15,20 @@ border-bottom: 5px ridge #f5e1e1f6;
 
 
 main {
-    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+}
+
+footer {
+    display: block;
+    background-color: black;
+    height: 60px;
 }
 
 .contact-header {
-
     font-size: 38px;
 }
 
@@ -37,4 +46,8 @@ form  {
 form * {
     width: 80%;
     margin: 25px;
+}
+
+.send-button {
+    background-color: black;
 }
