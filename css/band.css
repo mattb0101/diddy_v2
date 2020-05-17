@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap');
 
+/*---------------------------------------------Grid Layout-----*/
 
 header {
     background: radial-gradient(circle farthest-side at 0% 50%,#f71e17 23.5%,rgba(240,166,17,0) 0)21px 30px,
@@ -15,8 +16,7 @@ border-bottom: 5px ridge #f5e1e1f6;
 }
 
 main {
-    grid-template-rows: 150px auto;
-    grid-template-columns: 1fr;
+    grid-template-rows: 120px auto;
 
     align-items: center; 
 }
@@ -28,8 +28,6 @@ footer {
 /*---------------------------------------------Band Info-----*/
 
 .band-info {
-    display: grid;
-    grid-column: 1 / span 2;
     padding: 0 25%;   
 }
 
@@ -49,7 +47,6 @@ footer {
     border: 4px inset rgb(174, 167, 167);
     border-radius: 2%;
     padding: 2vmin;
-    grid-column: 1 / span 2;
 }
 
 .band-member,
@@ -83,7 +80,8 @@ footer {
 }
 
 
-                /*-----------Grid Area Alignment------------*/
+/*---------------------------------------------Grid Allignment-----*/
+
 .band-member.dave {grid-area: 1 / 1 / 2 / 2;}
 .band-member.will {grid-area: 1 / 2 / 2 / 3;}
 .band-member.ryan {grid-area: 1 / 3 / 2 / 4;}
@@ -156,17 +154,60 @@ footer {
     margin: auto;
 }
 
+/*---------------------------------------------Phone Size Images-----*/
+
+.band-member-phone {
+    display: none;
+}
+
+.member-info-phone {
+    width: 100vw;
+    height: 30vh;
+}
+
+.member-info-phone img {
+    height: 30vmin;
+    width: 30vw;
+    border: 4px solid rgb(174, 167, 167);
+    border-radius: 50%;
+}
+
+.will-phone img {
+    float: right;
+}
+
+
+
 
 /*---------------------------------------------Footer-----*/
 
-/* Footer {
-    background-color: #000;
-    height: 50px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    border-top: 1px solid #fff;
-} */
+footer .social-container {
+    display: block;
+}
+
+/*--------------------------------------------Media Queries-----*/
+
+@media only screen and (max-width: 600px) {
+    .menu-list {
+        display: none;
+    }
+
+    .band-info {
+        padding: 0;
+    }
+
+    main {
+        grid-template-rows: 120px auto auto auto auto auto auto auto auto auto;
+    }
+
+    .band-member-select {
+        display: none;
+    }
+
+    .band-member-phone {
+        display: block;
+    }
+}
 
 
 
