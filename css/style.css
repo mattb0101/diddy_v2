@@ -73,6 +73,11 @@ footer {
     padding: 75px 0 0 20px;
 }
 
+.check,
+.check-label {
+    display: none;
+}
+
 nav {
     padding-left: 20px;
 }
@@ -146,7 +151,25 @@ footer .social-container {
 /*---------------------------------------------Media Queries-----*/
 
 @media only screen and (max-width: 600px) {
-        .logo-nav {
+
+    header {
+        display: grid;
+        grid-area: header;
+        grid-template-columns: auto;
+        align-items: top;
+        z-index: 99;
+    }
+
+    .nav-mainpage {
+        grid-area: 1 / 1 / 2 / 2;
+        padding: 0;
+    }
+
+    .check {
+        display: none;
+    }
+
+    .logo-nav {
         display: none;
     }
 
@@ -160,12 +183,86 @@ footer .social-container {
     }
 
     .menu-list {
-        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        grid-area: 1 / 1 / 1 / 1 ;
+        padding: 100px 0 25px 25px;
+        transform: scale(1, 0);
+        background-color: rgba(0, 0, 0, 0.95);
+        transform-origin: top;
+        transition: transform 500ms ease-out 80ms;
+
+        width: 100%;
+    }
+
+    .menu-item {
+        padding: 20px 0;
+        opacity: 0;
+        transition: opacity 150ms ease-in-out ;      
+    }
+
+    .check:checked ~ .menu-list {
+        transform: scale(1, 1);
+    }
+
+    /* .check:checked ~ .check-label{
+        transition: background-color 1000ms ease-in-out;
+        background-origin: top;
+        background-color: rgba(0, 0, 0, 0.9);
+    } */
+    
+    .check-label {
+        display: block;
+        height: 100px;
+        margin-left: 25px;
+        font-size: 200%;
+        padding: 25px;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        transition: opacity 500ms ease-out 400ms;
+        z-index: 999;
+    }
+
+    .cross-label {
+        display: block;
+        height: 100px;
+        margin-left: 25px;
+        font-size: 200%;
+        padding: 25px 0 0 28px;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 999;
+    }
+
+    .check:checked ~ .check-label {
+        opacity: 0;
+        transition: opacity 500ms ease-in-out;
+    }
+
+    .check:checked ~ .cross-label {
+        opacity: 1;
+        transition: opacity 500ms ease-in-out 400ms;
+    }
+
+    
+
+    .check:checked ~ .menu-list .menu-item {
+        opacity: 1;
+        transition: opacity 300ms ease-in-out 300ms;
+        
     }
     
 }
-
-@media only screen and (max-width: 1024px) {
+ 
+@media only screen and (min-width: 601px) and(max-width: 1024px) {
     .logo-nav {
         display: none;
     }
