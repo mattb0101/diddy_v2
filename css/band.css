@@ -3,7 +3,7 @@
 
 /*---------------------------------------------Grid Layout-----*/
 
-header {
+header { /* https://leaverou.github.io/css3patterns/#honeycomb - By Paul Salentiny -  Website where i got the code for this, need to reference somewhere! */
     background: radial-gradient(circle farthest-side at 0% 50%,#f71e17 23.5%,rgba(240,166,17,0) 0)21px 30px,
 radial-gradient(circle farthest-side at 0% 50%,#8b0404 24%,rgba(240,166,17,0) 0)19px 30px,
 linear-gradient(#f71e17 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#f71e17 0)0 0,
@@ -136,6 +136,11 @@ footer {
     background-size: cover;
 }
 
+.will:hover ~ .full-image {
+    background: url("../img/will/will-full-crop.jpg") no-repeat;
+    background-size: cover;
+}
+
 .megan:hover ~ .full-image {
     background: url("../img/megan/megan_cropped.jpg") no-repeat;
     background-size: cover;
@@ -162,19 +167,25 @@ footer {
 
 .member-info-phone {
     width: 100vw;
-    height: 30vh;
+    height: 25vh;
+    display: inline-block;
 }
 
 .member-info-phone img {
     height: 30vmin;
     width: 30vw;
+    margin-top: 10px;
     border: 4px solid rgb(174, 167, 167);
     border-radius: 50%;
 }
+.member-info-phone span {
+    font-size: 2.2em;
+    text-transform: uppercase;
+    font-family: "Luckiest Guy", cursive;
+    text-align: center;
 
-.will-phone img {
-    float: right;
 }
+
 
 
 
@@ -188,16 +199,12 @@ footer .social-container {
 /*--------------------------------------------Media Queries-----*/
 
 @media only screen and (max-width: 600px) {
-    .menu-list {
-        display: none;
-    }
-
     .band-info {
         padding: 0;
     }
 
     main {
-        grid-template-rows: 120px auto auto auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
     }
 
     .band-member-select {
@@ -205,7 +212,25 @@ footer .social-container {
     }
 
     .band-member-phone {
-        display: block;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .menu-list {
+        background: radial-gradient(circle farthest-side at 0% 50%,#f71e17 23.5%,rgba(240,166,17,0) 0)21px 30px,
+radial-gradient(circle farthest-side at 0% 50%,#8b0404 24%,rgba(240,166,17,0) 0)19px 30px,
+linear-gradient(#f71e17 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#f71e17 0)0 0,
+linear-gradient(150deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
+linear-gradient(30deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
+linear-gradient(90deg,#8b0404 2%,#f71e17 0,#f71e17 98%,#8b0404 0%)0 0 #f71e17;
+background-size: 40px 60px;
+
+border-bottom: 5px ridge #f5e1e1f6;
+
+top: 95px;
+
+padding: 0 0 25px 25px
     }
 }
 
