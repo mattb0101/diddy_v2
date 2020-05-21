@@ -84,6 +84,8 @@ nav {
 }
 
 
+
+
 .menu-list {
     list-style: none;
     display: grid;
@@ -105,10 +107,17 @@ nav {
     transition: all 0.3s ease;
 }
 
+.menu-item.active > a {
+    border-bottom: 2px solid #f7f8fa;
+}
+
 .menu-item a:hover {
     transform: scale(1.2);
-    color: #d6c90b;
-    
+    color: #d6c90b;  
+}
+
+.menu-item.active a:hover {
+    border-bottom: 2px solid #d6c90b;
 }
 
 .social-container {
@@ -207,23 +216,17 @@ footer .social-container {
     .check:checked ~ .menu-list {
         transform: scale(1, 1);
     }
-
-    /* .check:checked ~ .check-label{
-        transition: background-color 1000ms ease-in-out;
-        background-origin: top;
-        background-color: rgba(0, 0, 0, 0.9);
-    } */
     
     .check-label {
         display: block;
         height: 100px;
-        margin-left: 25px;
+        margin-right: 25px;
         font-size: 200%;
         padding: 25px;
         margin: 0;
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         opacity: 1;
         transition: opacity 500ms ease-out 400ms;
         z-index: 999;
@@ -232,13 +235,13 @@ footer .social-container {
     .cross-label {
         display: block;
         height: 100px;
-        margin-left: 25px;
+        margin-right: 25px;
         font-size: 200%;
-        padding: 25px 0 0 28px;
+        padding: 25px 28px 0 0;
         margin: 0;
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         opacity: 0;
         z-index: 999;
     }
