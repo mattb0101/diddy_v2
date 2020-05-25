@@ -19,12 +19,13 @@ main {
     grid-template-rows: 100px auto;
     grid-template-columns: auto auto;
     align-items: center;
-    
 }
 
 footer {
-    background: #000;
+    background-color: rgba(0, 0, 0, 0.9);
+    clip-path: polygon(0% 25%, 0% 100%, 100% 100%, 100% 0%);
 }
+
 
 /*---------------------------------------------Band Info-----*/
 
@@ -191,7 +192,7 @@ footer {
 
 .member-info-phone {
     width: 92vw;
-    height: 26vh;
+    height: 35vh;
     display: inline-block;
     margin: 0 4vw;
     background-color: rgba(0, 0, 0, 0.6);
@@ -205,10 +206,16 @@ footer {
     border-radius: 50%;
 }
 .member-info-phone span {
-    font-size: 2.2em;
+    font-size: 1.8em;
     text-transform: uppercase;
     font-family: "Luckiest Guy", cursive;
     text-align: center;
+}
+
+.member-info-phone i {
+    font-size: 2em;
+    background: transparent;
+    margin-top: 1vh;
 }
 
 hr {

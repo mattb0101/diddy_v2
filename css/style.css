@@ -49,6 +49,7 @@ header {
     grid-area: header;
     grid-template-columns: auto 1fr 20vw;
     align-items: center;
+    width: 100vw;
 }
 
 main {
@@ -167,6 +168,10 @@ footer .social-container {
         grid-area: header;
         grid-template-columns: auto;
         align-items: top;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100px;
         z-index: 99;
     }
 
