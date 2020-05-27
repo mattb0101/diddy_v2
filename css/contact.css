@@ -9,23 +9,16 @@ radial-gradient(circle farthest-side at 0% 50%,#8b0404 24%,rgba(240,166,17,0) 0)
 linear-gradient(#f71e17 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#f71e17 0)0 0,
 linear-gradient(150deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
 linear-gradient(30deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
-linear-gradient(90deg,#8b0404 2%,#f71e17 0,#f71e17 98%,#8b0404 0%)0 0 #f71e17;
+linear-gradient(90deg,#8b0404 2%,#d81a13 0,#d81a13 98%,#8b0404 0%)0 0 #d81a13;
 background-size: 40px 60px;
 
 border-bottom: 5px ridge #f5e1e1f6;
 }
 
 
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-}
-
 footer {
     background-color: rgba(0, 0, 0, 0.9);
-    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 25%);
+    clip-path: polygon(0% 25%, 0% 100%, 100% 100%, 100% 0%);
 }
 
 
@@ -77,6 +70,7 @@ label {
 @media only screen and (max-width: 600px) {
     main {
     grid-template-columns: 1fr;
+    grid-template-rows: 100px auto auto;
     }
     
     .logo-nav {
@@ -90,7 +84,7 @@ label {
                     linear-gradient(#20a31c 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#20a31c 0)0 0,
                     linear-gradient(150deg,#20a31c 24%,#004b13 0,#004b13 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#004b13 0,#004b13 76%,#20a31c 0)0 0,
                     linear-gradient(30deg,#20a31c 24%,#004b13 0,#004b13 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#004b13 0,#004b13 76%,#20a31c 0)0 0,
-                    linear-gradient(90deg,#004b13 2%,#20a31c 0,#20a31c 98%,#004b13 0%)0 0 #20a31c;
+                    linear-gradient(90deg,#004b13 2%,#1e9919 0,#1e9919 98%,#004b13 0%)0 0 #1e9919;
         background-size: 40px 60px;
 
         border-bottom: 5px ridge #f5e1e1f6;
@@ -99,10 +93,10 @@ label {
     }
 
     .contact-header {
-        grid-area: 1 / 1;
+        grid-area: 2 / 1;
         width: 90vw;
         padding: 5vmin;
-        margin: 10vh 4vw 3vh 4vw;
+        margin: 3vh 4vw 3vh 4vw;
         font-size: 1.5em;
     }
 

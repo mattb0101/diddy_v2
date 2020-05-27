@@ -20,6 +20,7 @@ a:hover {
 
 
 
+
 /*---------------------------------------------Background-----*/
 
 body {
@@ -39,6 +40,17 @@ body {
     background-size: cover;
     background-attachment: fixed;
     
+}
+
+/*---------------------------------------------Title-----*/
+
+.page-title {
+    font-family: "Londrina Solid", cursive;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    align-self: end;
+    margin-top: 2vh;
 }
 
 
