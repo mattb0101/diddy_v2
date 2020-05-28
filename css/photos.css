@@ -81,6 +81,7 @@ footer {
 
 .video-main {
     margin-top: 2vh;
+    border: 5px ridge rgb(174, 167, 167);
 }
 
 
@@ -90,7 +91,7 @@ footer {
 @media only screen and (max-width: 600px) {
     main {
         grid-template-columns: auto;
-        grid-template-rows: 100px auto;
+        grid-template-rows: 100px 50vh auto auto;
     }
 
     .logo-nav {
@@ -116,6 +117,7 @@ footer {
         height: 60vw;
         width: 80vw;
         margin-top: 2vh;
+        grid-area: 2 / 1;
     }
 
     .carousel-caption {
@@ -124,4 +126,19 @@ footer {
         right: auto;
         margin-top: 1vh;
     }
+
+    .gallery {
+    column-count: 2;
+    }
+
+    .gallery-image {
+    width: 45vw;
+}
+
+    .gallery-desc {
+    font-size: 0.7rem;
+    padding: 10px;
+    text-align: center;
+
+
 }

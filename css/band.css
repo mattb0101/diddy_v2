@@ -102,6 +102,8 @@ footer {
     grid-area: 3 / 5 / 4 / 6;
     margin: auto;
     max-width: calc(2 * 15vmin);
+    max-height: 15vmin;
+    overflow: auto;
 }
 
 .band-member img {
@@ -133,10 +135,11 @@ footer {
 
 .band-member:hover {
     background-color: rgba(174, 167, 167, 0.233);
+    cursor: pointer;
 }
 
 .band-member:hover img {
-    transform: scale(1.2) 
+    transform: scale(1.2)
 }
 
 .band-member:hover ~ .full-image span {
@@ -152,6 +155,8 @@ footer {
 }
 
 .dave:hover ~ .member-name:after {content: 'Dave';}
+
+
 .will:hover ~ .member-name:after {content: 'Will';}
 .ryan:hover ~ .member-name:after {content: 'Ryan';}
 .matt-s:hover ~ .member-name:after {content: 'Matt S';}
@@ -161,10 +166,15 @@ footer {
 .laurie:hover ~ .member-name:after {content: 'Laurie';}
 .matt-b:hover ~ .member-name:after {content: 'Matt B';}
 
-.dave:hover ~ .member-info:after {content: "Dave is a bit of a bellend...";}
+.dave:hover ~ .member-info:after {content: "The last DvK member who also plays in Millennials, guitar and vocals, Dave. When he isn’t writing songs Dave enjoys playing tag rugby with @tag_break and board games. Check out his board game collection on his page. ";}
 .will:hover ~ .member-info:after {content: "Dave is a bit of a bellend...";}
 .ryan:hover ~ .member-info:after {content: "The first of four members of the band who also play together in 90s/00s pop punk and indie covers band, Millennials. When he’s not killing it on his Les Paul, Ryan is a keen gamer (like all of us!), and footballer";}
-.megan:hover ~ .member-info:after {content: "Megan ain't all that bad...";}
+.matt-s:hover ~ .member-info:after {content: "On bass/vocals, and the second member of the band who also plays in Millennials, Matt @matt_foe. Matt is also a long suffering Leeds United fan, a keen gamer and collector of all things Nintendo.";}
+.belle:hover ~ .member-info:after {content: "Today we move onto our fabulous front pair. Bringing all the punk emo glam you could hope for, on vocals, Belle. Belle’s interests include pizza, getting tattoos of pizza, and animals, and probably feeding them pizza.";}
+.gary:hover ~ .member-info:after {content: "Bringing so much more than just music, it’s Gary, dancer and tromber ... trombist (?) ... tromboninator! Like all of us, Gary likes computer games and is always up for going to see any live music, where you will usually find him somewhere near the front.";}
+.megan:hover ~ .member-info:after {content: "Moving onto the horns section, say hello to our trumpet player, Megan. You may also catch some fantastic videos of Megan entertaining children during lockdown, as part of her job (👏), hence the faint whiskers.";}
+.laurie:hover ~ .member-info:after {content: "Next up, the only member of our horns section that we actually have a photo of playing their instrument, Laurie on saxophone. Laurie is a very active musician, playing around the country in a number of ensembles, including bands and alongside DJs, as well as passing his knowledge and talent on to new musicians around Leeds.";}
+.matt-b:hover ~ .member-info:after {content: "Next up on the roster is the beast himself! It’s Matt on drums. Brother of guitarist, Ryan, and third member of Millennials. Matt is a very talented musician, and can also be found playing percussion in his brass band and bossing local pub quizzes";}
 
 .dave:hover ~ .full-image {
     background: url("../img/dave/dave-3-crop.jpg") no-repeat;
