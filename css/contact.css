@@ -15,6 +15,12 @@ background-size: 40px 60px;
 border-bottom: 5px ridge #f5e1e1f6;
 }
 
+main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px auto;
+    align-items: center;
+    }
+
 
 footer {
     background-color: rgba(0, 0, 0, 0.9);
@@ -22,9 +28,16 @@ footer {
 }
 
 
+.page-title {
+    grid-area: 1 / 1 / span 1 / span 2;
+}
+
+
+
 /*---------------------------------------------Side Text-----*/
 
 .contact-header {
+    grid-area: 2 / 2;
     padding: 2vmin;
     background-color: rgba(0, 0, 0, 0.6);
     font-size: 2em;
@@ -35,6 +48,7 @@ footer {
 /*---------------------------------------------Contact Form-----*/
 
 form  {
+    grid-area: 2 / 1;
     background-color: rgba(174, 167, 167, 0.5);
     border: 4px inset rgb(174, 167, 167);
     border-radius: 2%;
@@ -62,6 +76,17 @@ label {
 }
 
 /*---------------------------------------------Footer-----*/
+
+footer .social-container {
+    display: none;
+}
+
+.website-about {
+    display: block;
+    grid-area: 1 / 3; 
+    margin: auto;
+    justify-content: center;
+}
 
 
 

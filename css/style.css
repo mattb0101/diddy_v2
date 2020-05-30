@@ -26,7 +26,7 @@ a:hover {
 body {
     display: grid;
     grid-template-areas: "header" "main" "footer";
-    grid-template-rows: 100px 1fr auto;
+    grid-template-rows: 100px 1fr 100px;
 
     height: 100vh;
     width: 100vw;
@@ -44,13 +44,13 @@ body {
 
 /*---------------------------------------------Title-----*/
 
-.page-title {
+.page-title h1 {
     font-family: "Londrina Solid", cursive;
-    font-size: 2em;
+    font-size: 4em;
     text-transform: uppercase;
     text-decoration: underline;
     align-self: end;
-    margin-top: 2vh;
+    margin-top: 1vh;
 }
 
 
@@ -73,8 +73,9 @@ main {
 
 footer {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-area: footer;
-    justify-content: center;
+    justify-items: center;
 }
 
 
@@ -171,6 +172,8 @@ footer .social-container {
     display: none;
 }
 
+
+
 /*---------------------------------------------Media Queries-----*/
 
 @media only screen and (max-width: 600px) {
@@ -207,6 +210,7 @@ footer .social-container {
     footer .social-container {
         display: block;
         padding: 25px 0;
+        grid-area: 1 / 2;
     }
 
     .menu-list {
@@ -297,6 +301,7 @@ and (max-device-width: 1024px) {
     footer .social-container {
         display: block;
         padding: 25px 0;
+        grid-area: 1 / 2;
     }
 
     header {
