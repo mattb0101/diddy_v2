@@ -54,6 +54,10 @@ footer {
     font-size: 1.3em;
 }
 
+.carousel-control-prev-icon {
+    color: #fff;
+}
+
 
 /*---------------------------------------------Gallery-----*/
 
@@ -62,13 +66,13 @@ footer {
     line-height: auto;
     column-count: 3;
     column-gap: 1vw;
-    padding-top: 1vh;
+    padding: 1vh 0;
 }
 
 .gallery-image {
-    width: 30vw;
+    width: 25vw;
     background-color: rgba(174, 167, 167, 0.5);
-    margin-bottom: 1vmin;
+    margin: 1vmin;
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;
@@ -82,13 +86,14 @@ footer {
 
 .gallery-desc {
     font-size: 1.2rem;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
 }
 
 /*---------------------------------------------video-----*/
 
 .video-main {
+    max-width: 100vw;
     margin: 2vh 0;
     border: 5px ridge rgb(174, 167, 167);
 }
@@ -113,12 +118,16 @@ footer .social-container {
 @media only screen and (max-width: 600px) {
     main {
         grid-template-columns: auto;
-        grid-template-rows: 100px 50vh auto auto;
+        grid-template-rows: auto 50vh auto auto;
     }
 
     .logo-nav {
         display: block;
         z-index: 9999;
+    }
+
+    .page-title {
+        font-size: 80%;
     }
 
     .menu-list {
@@ -157,7 +166,7 @@ footer .social-container {
     }
 
     .carousel-caption p {
-        font-size: 0.7em;
+        font-size: 0.9em;
     }
 
     .gallery {
@@ -212,4 +221,18 @@ and (max-device-width: 1024px) {
         text-shadow: none;
         max-width: 100%;
     }
+
+    .carousel-caption p {
+        font-size: 1.5em;
+    }
+
+    .gallery {
+    column-count: 2;
+    
+    }
+
+    .gallery-image {
+    width: 40vw;
+    }
+
 }
