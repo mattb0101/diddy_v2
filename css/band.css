@@ -178,27 +178,27 @@ footer {
 .matt-b:hover ~ .member-info::after {content: "Next up on the roster is the beast himself! It’s Matt on drums. Brother of guitarist, Ryan, and third member of Millennials. Matt is a very talented musician, and can also be found playing percussion in his brass band and bossing local pub quizzes";}
 
 .dave:hover ~ .full-image {
-    background: url("../img/dave/dave-3-crop.jpg") no-repeat;
+    background: url("./img/dave/dave-3-crop.jpg") no-repeat;
     background-size: cover;
 }
 
 .will:hover ~ .full-image {
-    background: url("../img/will/will-full-crop.jpg") no-repeat;
+    background: url("./img/will/will-full-crop.jpg") no-repeat;
     background-size: cover;
 }
 
 .belle:hover ~ .full-image {
-    background: url("../img/belle/belle-full-image.jpg") no-repeat;
+    background: url("./img/belle/belle-full-image.jpg") no-repeat;
     background-size: cover;
 }
 
 .megan:hover ~ .full-image {
-    background: url("../img/megan/megan_cropped.jpg") no-repeat;
+    background: url("./img/megan/megan_cropped.jpg") no-repeat;
     background-size: cover;
 }
 
 .matt-b:hover ~ .full-image {
-    background: url("../img/matt/matt-full-image.jpg") no-repeat;
+    background: url("./img/matt/matt-full-image.jpg") no-repeat;
     background-size: cover;
 }
 
