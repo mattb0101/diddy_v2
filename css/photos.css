@@ -54,8 +54,16 @@ footer {
     font-size: 1.3em;
 }
 
-.carousel-control-prev-icon {
-    color: #fff;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none;
+    
+} 
+
+.carousel-control-prev-icon i,
+.carousel-control-next-icon i {
+    font-size: 200%;
+    color: #000;
 }
 
 
@@ -141,7 +149,7 @@ footer .social-container {
 
         border-bottom: 5px ridge #f5e1e1f6;
 
-        padding: 150px 0 25px 25px;
+        padding: 100px 0 25px 25px;
     }
 
     #central-slideshow {
@@ -167,6 +175,12 @@ footer .social-container {
 
     .carousel-caption p {
         font-size: 0.9em;
+    }
+
+    .carousel-control-prev-icon i,
+    .carousel-control-next-icon i {
+        font-size: 100%;
+        color: #000;
     }
 
     .gallery {
