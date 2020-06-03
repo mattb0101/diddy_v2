@@ -89,13 +89,29 @@ footer {
     border-radius: 50%;
 }
 
+.full-image span {
+    height: calc(2 * 15vmin);
+    line-height: 1;
+}
+
 .member-name {
     grid-area: 2 / 5 / 3 / 6;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    height: 19vmin;
+    
+}
+
+.member-name span {
+    grid-area: 2 / 1;
+    position: absolute;
+    font-size: 55px;
     text-transform: uppercase;
     font-family: "Luckiest Guy", sans-serif;
     font-weight: bold;
-    font-size: 55px;
-    align-self: end;
+    width: calc(2 * 15vmin);
     text-align: center;
 }
 
@@ -134,30 +150,82 @@ footer {
 
 /*---------------------------------------------Selection Change-----*/
 
+.member-name-blank {
+    opacity: 1;
+
+    transition: opacity 10s;
+}
+
+.member-name-dave, 
+.member-name-will,
+.member-name-ryan,
+.member-name-matt-s,
+.member-name-belle,
+.member-name-gary,
+.member-name-megan,
+.member-name-laurie,
+.member-name-matt-b {
+    opacity: 0;
+
+    transition: opacity 10s;
+}
+
+.band-member:hover ~ .member-name > .member-name-blank {
+    opacity: 0;
+
+    transition: opacity 0s;
+} 
+
+.band-member.dave:hover ~ .member-name > .member-name-dave,
+.band-member.will:hover ~ .member-name > .member-name-will,
+.band-member.ryan:hover ~ .member-name > .member-name-ryan,
+.band-member.matt-s:hover ~ .member-name > .member-name-matt-s,
+.band-member.belle:hover ~ .member-name > .member-name-belle,
+.band-member.gary:hover ~ .member-name > .member-name-gary,
+.band-member.megan:hover ~ .member-name > .member-name-megan,
+.band-member.laurie:hover ~ .member-name > .member-name-laurie,
+.band-member.matt-b:hover ~ .member-name > .member-name-matt-b {
+    opacity: 1;
+
+    transition: opacity 0s;
+} 
+
+.band-member.dave:hover ~ .member-name > span:not(:first-child),
+.band-member.will:hover ~ .member-name > span:not(:first-child),
+.band-member.ryan:hover ~ .member-name > span:not(:first-child),
+.band-member.matt-s:hover ~ .member-name > span:not(:first-child),
+.band-member.belle:hover ~ .member-name > span:not(:first-child),
+.band-member.gary:hover ~ .member-name > span:not(:first-child),
+.band-member.megan:hover ~ .member-name > span:not(:first-child),
+.band-member.laurie:hover ~ .member-name > span:not(:first-child),
+.band-member.matt-b:hover ~ .member-name > span:not(:first-child) {
+    transition: none !important;
+}
+
+
+
+
+
 .band-member:hover {
     background-color: rgba(174, 167, 167, 0.233);
     cursor: pointer;
 }
 
 .band-member:hover img {
-    transform: scale(1.2)
+    transform: scale(1.2);
 }
 
 .band-member:hover ~ .full-image span {
     display: none;
 }
 
-.band-member:hover ~ .member-name span {
-    display: none;
-}
 
 .band-member:hover ~ .member-info span {
     display: none;
 }
 
-.dave:hover ~ .member-name:after {content: 'Dave';}
 
-
+/* .dave:hover ~ .member-name:after {content: 'Dave';}
 .will:hover ~ .member-name::after {content: 'Will';}
 .ryan:hover ~ .member-name::after {content: 'Ryan';}
 .matt-s:hover ~ .member-name::after {content: 'Matt S';}
@@ -165,7 +233,7 @@ footer {
 .gary:hover ~ .member-name::after {content: 'Gary';}
 .megan:hover ~ .member-name::after {content: 'Megan';}
 .laurie:hover ~ .member-name::after {content: 'Laurie';}
-.matt-b:hover ~ .member-name::after {content: 'Matt B';}
+.matt-b:hover ~ .member-name::after {content: 'Matt B';} */
 
 .dave:hover ~ .member-info::after {content: 'The last DvK member who also plays in Millennials, guitar and vocals, Dave. When he isn’t writing songs Dave enjoys playing tag rugby with @tag_break and board games. Check out his board game collection on his page.';}
 .will:hover ~ .member-info::after {content: 'Rounding off the band, the second of our front pair, and possibly the best guitarist in the band, on vocals, Will. Another keen gamer, Will also enjoys composing and producing music from a multitude of genres and can often be found DJing around Leeds with Drum & Bass trio Minus Four';}
@@ -178,27 +246,28 @@ footer {
 .matt-b:hover ~ .member-info::after {content: "Next up on the roster is the beast himself! It’s Matt on drums. Brother of guitarist, Ryan, and third member of Millennials. Matt is a very talented musician, and can also be found playing percussion in his brass band and bossing local pub quizzes";}
 
 .dave:hover ~ .full-image {
-    background: url("./img/dave/dave-3-crop.jpg") no-repeat;
+    background-image: url("../img/dave/dave-3-crop.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
 .will:hover ~ .full-image {
-    background: url("./img/will/will-full-crop.jpg") no-repeat;
+    background: url("../img/will/will-full-crop.jpg") no-repeat;
     background-size: cover;
 }
 
 .belle:hover ~ .full-image {
-    background: url("./img/belle/belle-full-image.jpg") no-repeat;
+    background: url("../img/belle/belle-full-image.jpg") no-repeat;
     background-size: cover;
 }
 
 .megan:hover ~ .full-image {
-    background: url("./img/megan/megan_cropped.jpg") no-repeat;
+    background: url("../img/megan/megan_cropped.jpg") no-repeat;
     background-size: cover;
 }
 
 .matt-b:hover ~ .full-image {
-    background: url("./img/matt/matt-full-image.jpg") no-repeat;
+    background: url("../img/matt/matt-full-image.jpg") no-repeat;
     background-size: cover;
 }
 
