@@ -27,16 +27,6 @@ footer {
     position: relative;
 }
 
-/*---------------------------------------------Title-----*/
-
-/* .page-title {
-    font-family: "Londrina Solid", cursive;
-    font-size: 2em;
-    text-transform: uppercase;
-    text-decoration: underline;
-    align-self: end;
-    margin-top: 2vh;
-} */
 
 /*---------------------------------------------Band Info-----*/
 
@@ -82,16 +72,20 @@ footer {
 
 .full-image {
     grid-area: 1 / 5 / 3 / 6;
+    position: relative;
     height: calc(2 * 15vmin);
     width: calc(2 * 15vmin);
     background-color: rgba(174, 167, 167, 0.5); 
-    border: 10px solid rgb(174, 167, 167);
     border-radius: 50%;
 }
 
 .full-image span {
+    position: absolute;
     height: calc(2 * 15vmin);
+    width: calc(2 * 15vmin);
     line-height: 1;
+    border-radius: 50%;
+    border: 10px solid rgb(174, 167, 167);
 }
 
 .member-name {
@@ -101,7 +95,6 @@ footer {
     grid-template-rows: 1fr 1fr;
     position: relative;
     height: 19vmin;
-    
 }
 
 .member-name span {
@@ -117,10 +110,18 @@ footer {
 
 .member-info {
     grid-area: 3 / 5 / 4 / 6;
-    margin: auto;
-    max-width: calc(2 * 15vmin);
-    max-height: 15vmin;
+    position: relative;
+    max-height: 19vmin;
+}
+
+.member-info span {
+    position: absolute;
+    width: calc(2 * 15vmin);
     overflow: auto;
+}
+
+.member-info span.member-info-blank {
+    text-align: center;
 }
 
 .band-member img {
@@ -150,10 +151,64 @@ footer {
 
 /*---------------------------------------------Selection Change-----*/
 
+        /*-------------------------Image Change-----*/
+
+.full-image-blank {
+    
+    opacity: 1;
+
+    transition: opacity 1000s;
+}
+
+.full-image-dave {background-image: url("../img/dave/dave-3-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
+.full-image-will {background-image: url("../img/will/will-full-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
+.full-image-ryan {background-image: url("../img/dave/dave-3-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
+.full-image-matt-s {background-image: url("../img/dave/dave-3-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
+.full-image-belle {background-image: url("../img/belle/belle-full-image.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
+.full-image-gary {background-image: url("../img/dave/dave-3-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
+.full-image-megan {background-image: url("../img/megan/megan_cropped.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
+.full-image-laurie {background-image: url("../img/dave/dave-3-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
+.full-image-matt-b {background-image: url("../img/matt/matt-full-image.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
+
+
+.band-member:hover ~ .full-image > .full-image-blank {
+    opacity: 0;
+
+    transition: opacity 0s;
+} 
+
+.band-member.dave:hover ~ .full-image > .full-image-dave,
+.band-member.will:hover ~ .full-image > .full-image-will,
+.band-member.ryan:hover ~ .full-image > .full-image-ryan,
+.band-member.matt-s:hover ~ .full-image > .full-image-matt-s,
+.band-member.belle:hover ~ .full-image > .full-image-belle,
+.band-member.gary:hover ~ .full-image > .full-image-gary,
+.band-member.megan:hover ~ .full-image > .full-image-megan,
+.band-member.laurie:hover ~ .full-image > .full-image-laurie,
+.band-member.matt-b:hover ~ .full-image > .full-image-matt-b  {
+    opacity: 1;
+
+    transition: opacity 0s;
+}
+
+.band-member.dave:hover ~ .full-image > span:not(:first-child),
+.band-member.will:hover ~ .full-image > span:not(:first-child),
+.band-member.ryan:hover ~ .full-image > span:not(:first-child),
+.band-member.matt-s:hover ~ .full-image > span:not(:first-child),
+.band-member.belle:hover ~ .full-image > span:not(:first-child),
+.band-member.gary:hover ~ .full-image > span:not(:first-child),
+.band-member.megan:hover ~ .full-image > span:not(:first-child),
+.band-member.laurie:hover ~ .full-image > span:not(:first-child),
+.band-member.matt-b:hover ~ .full-image > span:not(:first-child) {
+    transition: none !important;
+}
+
+        /*-------------------------Name Change-----*/
+
 .member-name-blank {
     opacity: 1;
 
-    transition: opacity 10s;
+    transition: opacity 1000s;
 }
 
 .member-name-dave, 
@@ -167,7 +222,7 @@ footer {
 .member-name-matt-b {
     opacity: 0;
 
-    transition: opacity 10s;
+    transition: opacity 1000s;
 }
 
 .band-member:hover ~ .member-name > .member-name-blank {
@@ -202,7 +257,60 @@ footer {
     transition: none !important;
 }
 
+        /*-------------------------Info Change-----*/
 
+
+.member-info-blank {
+    opacity: 1;
+
+    transition: opacity 1000s;
+}
+
+.member-info-dave, 
+.member-info-will,
+.member-info-ryan,
+.member-info-matt-s,
+.member-info-belle,
+.member-info-gary,
+.member-info-megan,
+.member-info-laurie,
+.member-info-matt-b {
+    opacity: 0;
+
+    transition: opacity 1000s;
+}
+
+.band-member:hover ~ .member-info > .member-info-blank {
+    opacity: 0;
+
+    transition: opacity 0s;
+} 
+
+.band-member.dave:hover ~ .member-info > .member-info-dave,
+.band-member.will:hover ~ .member-info > .member-info-will,
+.band-member.ryan:hover ~ .member-info > .member-info-ryan,
+.band-member.matt-s:hover ~ .member-info > .member-info-matt-s,
+.band-member.belle:hover ~ .member-info > .member-info-belle,
+.band-member.gary:hover ~ .member-info > .member-info-gary,
+.band-member.megan:hover ~ .member-info > .member-info-megan,
+.band-member.laurie:hover ~ .member-info > .member-info-laurie,
+.band-member.matt-b:hover ~ .member-info > .member-info-matt-b {
+    opacity: 1;
+
+    transition: opacity 0s;
+} 
+
+.band-member.dave:hover ~ .member-info > span:not(:first-child),
+.band-member.will:hover ~ .member-info > span:not(:first-child),
+.band-member.ryan:hover ~ .member-info > span:not(:first-child),
+.band-member.matt-s:hover ~ .member-info > span:not(:first-child),
+.band-member.belle:hover ~ .member-info > span:not(:first-child),
+.band-member.gary:hover ~ .member-info > span:not(:first-child),
+.band-member.megan:hover ~ .member-info > span:not(:first-child),
+.band-member.laurie:hover ~ .member-info > span:not(:first-child),
+.band-member.matt-b:hover ~ .member-info > span:not(:first-child) {
+    transition: none !important;
+}
 
 
 
@@ -214,63 +322,6 @@ footer {
 .band-member:hover img {
     transform: scale(1.2);
 }
-
-.band-member:hover ~ .full-image span {
-    display: none;
-}
-
-
-.band-member:hover ~ .member-info span {
-    display: none;
-}
-
-
-/* .dave:hover ~ .member-name:after {content: 'Dave';}
-.will:hover ~ .member-name::after {content: 'Will';}
-.ryan:hover ~ .member-name::after {content: 'Ryan';}
-.matt-s:hover ~ .member-name::after {content: 'Matt S';}
-.belle:hover ~ .member-name::after {content: 'Belle';}
-.gary:hover ~ .member-name::after {content: 'Gary';}
-.megan:hover ~ .member-name::after {content: 'Megan';}
-.laurie:hover ~ .member-name::after {content: 'Laurie';}
-.matt-b:hover ~ .member-name::after {content: 'Matt B';} */
-
-.dave:hover ~ .member-info::after {content: 'The last DvK member who also plays in Millennials, guitar and vocals, Dave. When he isn’t writing songs Dave enjoys playing tag rugby with @tag_break and board games. Check out his board game collection on his page.';}
-.will:hover ~ .member-info::after {content: 'Rounding off the band, the second of our front pair, and possibly the best guitarist in the band, on vocals, Will. Another keen gamer, Will also enjoys composing and producing music from a multitude of genres and can often be found DJing around Leeds with Drum & Bass trio Minus Four';}
-.ryan:hover ~ .member-info::after {content: "The first of four members of the band who also play together in 90s/00s pop punk and indie covers band, Millennials. When he’s not killing it on his Les Paul, Ryan is a keen gamer (like all of us!), and footballer";}
-.matt-s:hover ~ .member-info::after {content: "On bass/vocals, and the second member of the band who also plays in Millennials, Matt @matt_foe. Matt is also a long suffering Leeds United fan, a keen gamer and collector of all things Nintendo.";}
-.belle:hover ~ .member-info::after {content: "Today we move onto our fabulous front pair. Bringing all the punk emo glam you could hope for, on vocals, Belle. Belle’s interests include pizza, getting tattoos of pizza, and animals, and probably feeding them pizza.";}
-.gary:hover ~ .member-info::after {content: "Bringing so much more than just music, it’s Gary, dancer and tromber ... trombist (?) ... tromboninator! Like all of us, Gary likes computer games and is always up for going to see any live music, where you will usually find him somewhere near the front.";}
-.megan:hover ~ .member-info::after {content: "Moving onto the horns section, say hello to our trumpet player, Megan. You may also catch some fantastic videos of Megan entertaining children during lockdown, as part of her job (👏), hence the faint whiskers.";}
-.laurie:hover ~ .member-info::after {content: "Next up, the only member of our horns section that we actually have a photo of playing their instrument, Laurie on saxophone. Laurie is a very active musician, playing around the country in a number of ensembles, including bands and alongside DJs, as well as passing his knowledge and talent on to new musicians around Leeds.";}
-.matt-b:hover ~ .member-info::after {content: "Next up on the roster is the beast himself! It’s Matt on drums. Brother of guitarist, Ryan, and third member of Millennials. Matt is a very talented musician, and can also be found playing percussion in his brass band and bossing local pub quizzes";}
-
-.dave:hover ~ .full-image {
-    background-image: url("../img/dave/dave-3-crop.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.will:hover ~ .full-image {
-    background: url("../img/will/will-full-crop.jpg") no-repeat;
-    background-size: cover;
-}
-
-.belle:hover ~ .full-image {
-    background: url("../img/belle/belle-full-image.jpg") no-repeat;
-    background-size: cover;
-}
-
-.megan:hover ~ .full-image {
-    background: url("../img/megan/megan_cropped.jpg") no-repeat;
-    background-size: cover;
-}
-
-.matt-b:hover ~ .full-image {
-    background: url("../img/matt/matt-full-image.jpg") no-repeat;
-    background-size: cover;
-}
-
 
 
 
