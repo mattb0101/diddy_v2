@@ -16,9 +16,10 @@ border-bottom: 5px ridge #f5e1e1f6;
 }
 
 main {
-    grid-template-rows: 100px auto;
+    grid-template-rows: 100px auto auto;
     grid-template-columns: auto auto;
     align-items: center;
+    justify-items: center;
 }
 
 footer {
@@ -28,22 +29,34 @@ footer {
 }
 
 
+/*---------------------------------------------Page Title-----*/
+
+.page-title {
+    grid-area: 1 / 1 / span 1 / span 2;
+}
+
+.page-title h1 {
+    font-size: 4em;
+}
+
+
 /*---------------------------------------------Band Info-----*/
 
 .band-info {
-    grid-area: 1 / 2 / span 2 / span 1;
+    grid-area: 2 / 1 / span 1 / span 2;
     padding: 2vmin ;
     background-color: rgba(0, 0, 0, 0.6);
-    height: 90%;
-    width: 90%;
-    font-size: 2em; 
+    width: 60vw;
+    font-size: 2em;
+    margin-bottom: 5vh;
+
 }
 
 
 /*---------------------------------------------Band Members-----*/
 
 .band-member-select {
-    grid-area: 2 / 1;
+    grid-area: 3 / 1 / span 1 / span 2;
     display: inline-grid;
     grid-template-columns: repeat(5, auto);
     grid-template-rows: repeat(3, auto);
@@ -52,12 +65,12 @@ footer {
     width: auto;
     max-width: 100vw;
     position: relative;
-    justify-self: left;
     margin: 0 2vw;
     background-color: rgba(174, 167, 167, 0.5);
     border: 4px inset rgb(174, 167, 167);
     border-radius: 2%;
     padding: 2vmin;
+    margin-bottom: 2vh;
 }
 
 .band-member,
@@ -321,6 +334,9 @@ footer {
 
 .band-member:hover img {
     transform: scale(1.2);
+    filter: brightness(125%);
+
+    transition: all 0.3s ease-in;
 }
 
 
@@ -411,6 +427,10 @@ footer .social-container {
         z-index: 9999;
     }
 
+    .page-title {
+        grid-area: 1 / 1;
+    }
+
     .page-title h1 {
         font-size: 3em;
     }
@@ -476,6 +496,10 @@ and (max-device-width: 1024px) {
         grid-template-rows:  100px auto auto auto auto auto auto auto auto auto auto;
     }
 
+    .page-title {
+        grid-area: 1 / 1;
+    }
+
     .band-info {
         grid-area: 2 / 1;
         padding: 5vmin;
@@ -485,7 +509,6 @@ and (max-device-width: 1024px) {
 
     .band-member-select {
         display: none;
-
     }
 
     .band-member-phone {
@@ -494,7 +517,6 @@ and (max-device-width: 1024px) {
         vertical-align: middle;
         font-size: 1.5em;
     }
-
 
     .member-info-phone i {
         margin-top: 0;
