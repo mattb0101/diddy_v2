@@ -1,26 +1,42 @@
 # Diddy vs The Kingdom
 
-First milestone project for the Full Stack Developer course with the code institute. This is based on a new band that i am a part of. The project has to be written in HTML and CSS, and there is the option of using Bootstrap and other frameworks or libraries.
+This project will be designed for the band that has recently formed that i am part of. We have been practicing for almost a year now, with some social media pages, but a useable website would help the band promote itself and be able to get further and have a visual internet presence. 
 
-## Mandatory Points
+As The band is very new there is nothing on the page about shows or albums, but there is information about the band all together in one place for interested people to be able to get a sense of the band.
 
-1. Static front end
-    - Custom HTML5 and CSS3 to create a website of at least 3 pages.
-2. Information Architecture
-    - Main Navigation menu and Structured layout.
-3. Documentation
-    - README.md file
-4. Version Control
-    - Git and GitHub for version Control
-5. Attribution
-    - Maintain clear seperation between user and External
-6. Deployment
-    - Deploy final version to hosting platform.
+## UX
 
+#### Wireframe Designs
 
-### Description
+<img src="./img/wireframes/wireframe1.jpg" width="450" height="350">
+<img src="./img/wireframes/wireframe2.jpg" width="450" height="350">
+<img src="./img/wireframes/wireframe3.jpg" width="450" height="175">
+
+## Features
 
 The project is a webpage to promote the band, give some information about the band and members, linking to social media and ability to contact.
+
+### Existing Features
+
+### Features Left to Implement
+
+## Technologies Used
+
+## Testing
+
+## Deployment
+
+## Credits
+
+### Content
+- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+
+### Media
+- The photos used in this site were obtained from ...
+
+### Acknowledgements
+
+- I received inspiration for this project from X
 
 ##### Landing
 
