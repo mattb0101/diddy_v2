@@ -6,6 +6,8 @@ As The band is very new there is nothing on the page about shows or albums, but 
 
 ## UX
 
+
+
 #### Wireframe Designs
 
 <img src="./img/wireframes/wireframe1.jpg" width="450" height="350">
@@ -14,9 +16,17 @@ As The band is very new there is nothing on the page about shows or albums, but 
 
 ## Features
 
-The project is a webpage to promote the band, give some information about the band and members, linking to social media and ability to contact.
-
 ### Existing Features
+
+* **Landing Page** - This is the home page or first page users will find. It is simple, with just a background, a navbar, a large band logo and a tagline. This gives people a quick look over what the website is representing, but simple so that it gets to the point.
+
+* **The Band** - A page to give some info about the band, let users know what the band is about and the type of music played. It then goes on to talk about the band members, giving some info about them and visuals of them.
+
+* **Gallery** - Various methods of showcasing the band, using a slideshow with some images, then a gallery of static images and a video of the band at a rehersal. 
+
+* **Contact Us** - Simple contact form to be able to get in contact with the band.
+
+
 
 ### Features Left to Implement
 
