@@ -47,7 +47,7 @@ footer {
     padding: 2vmin ;
     background-color: rgba(0, 0, 0, 0.6);
     width: 60vw;
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 5vh;
 
 }
@@ -108,6 +108,7 @@ footer {
     grid-template-rows: 1fr 1fr;
     position: relative;
     height: 19vmin;
+    color: #f7f8fa;
 }
 
 .member-name span {
@@ -149,6 +150,15 @@ footer {
     grid-area: 1 / 4 / 4 / 5;
 }
 
+/*---------------------------------------------Hover Test-----*/
+
+/* .band-member.dave:hover ~ .full-image {
+    grid-area: 1 / 2 / 3 / 3;
+} */
+
+
+
+
 
 /*---------------------------------------------Grid Allignment-----*/
 
@@ -167,7 +177,6 @@ footer {
         /*-------------------------Image Change-----*/
 
 .full-image-blank {
-    
     opacity: 1;
 
     transition: opacity 1000s;
@@ -176,7 +185,7 @@ footer {
 .full-image-dave {background-image: url("../img/dave/dave-3-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
 .full-image-will {background-image: url("../img/will/will-full-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
 .full-image-ryan {background-image: url("../img/dave/dave-3-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
-.full-image-matt-s {background-image: url("../img/dave/dave-3-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
+.full-image-matt-s {background-image: url("../img/matt-s/matt-full-image.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
 .full-image-belle {background-image: url("../img/belle/belle-full-image.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
 .full-image-gary {background-image: url("../img/dave/dave-3-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
 .full-image-megan {background-image: url("../img/megan/megan_cropped.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
@@ -219,9 +228,10 @@ footer {
         /*-------------------------Name Change-----*/
 
 .member-name-blank {
+    visibility: visible;
     opacity: 1;
 
-    transition: opacity 1000s;
+    transition: all 1000s;
 }
 
 .member-name-dave, 
@@ -233,15 +243,17 @@ footer {
 .member-name-megan,
 .member-name-laurie,
 .member-name-matt-b {
+    visibility: hidden;
     opacity: 0;
 
-    transition: opacity 1000s;
+    transition: all 1000s;
 }
 
 .band-member:hover ~ .member-name > .member-name-blank {
+    visibility: hidden;
     opacity: 0;
 
-    transition: opacity 0s;
+    transition: all 0s;
 } 
 
 .band-member.dave:hover ~ .member-name > .member-name-dave,
@@ -253,9 +265,10 @@ footer {
 .band-member.megan:hover ~ .member-name > .member-name-megan,
 .band-member.laurie:hover ~ .member-name > .member-name-laurie,
 .band-member.matt-b:hover ~ .member-name > .member-name-matt-b {
+    visibility: visible;
     opacity: 1;
-
-    transition: opacity 0s;
+    
+    transition: all 0s;
 } 
 
 .band-member.dave:hover ~ .member-name > span:not(:first-child),
@@ -274,9 +287,10 @@ footer {
 
 
 .member-info-blank {
+    visibility: visible;
     opacity: 1;
 
-    transition: opacity 1000s;
+    transition: all 1000s;
 }
 
 .member-info-dave, 
@@ -288,15 +302,17 @@ footer {
 .member-info-megan,
 .member-info-laurie,
 .member-info-matt-b {
+    visibility: hidden;
     opacity: 0;
 
-    transition: opacity 1000s;
+    transition: all 1000s;
 }
 
 .band-member:hover ~ .member-info > .member-info-blank {
+    visibility: hidden;
     opacity: 0;
 
-    transition: opacity 0s;
+    transition: all 0s;
 } 
 
 .band-member.dave:hover ~ .member-info > .member-info-dave,
@@ -308,9 +324,10 @@ footer {
 .band-member.megan:hover ~ .member-info > .member-info-megan,
 .band-member.laurie:hover ~ .member-info > .member-info-laurie,
 .band-member.matt-b:hover ~ .member-info > .member-info-matt-b {
+    visibility: visible;
     opacity: 1;
 
-    transition: opacity 0s;
+    transition: all 0s;
 } 
 
 .band-member.dave:hover ~ .member-info > span:not(:first-child),
@@ -437,9 +454,10 @@ footer .social-container {
 
     .band-info {
         grid-area: 2 / 1;
+        width: 90vw;
         padding: 5vmin;
-        margin: 3vh 4vw 3vh 4vw;
-        font-size: 1.2em;       
+        margin: 0 4vw;
+        font-size: 1em;       
     }
 
     main {
@@ -502,8 +520,9 @@ and (max-device-width: 1024px) {
 
     .band-info {
         grid-area: 2 / 1;
+        width: 90vw;
         padding: 5vmin;
-        margin: 3vh 4vw 3vh 4vw;
+        margin: 0 4vw;
         font-size: 1.5em;       
     }
 
