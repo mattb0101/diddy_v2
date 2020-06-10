@@ -12,6 +12,8 @@
 
 body {
     font-family: "Josefin Sans", cursive;
+    /* Put this in to stop there being am x scrollbar when a y scrollbar is present - not sure if its the right thing - https://stackoverflow.com/questions/18548465/prevent-scroll-bar-from-adding-up-to-the-width-of-page-on-chrome */
+    overflow-x: hidden;
 }
 
 a:hover {

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Luckiest+Guy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap');
 
 /*---------------------------------------------Grid Layout-----*/
 
@@ -18,6 +16,12 @@ border-bottom: 5px ridge #f5e1e1f6;
 footer {
     background-color: rgba(0, 0, 0, 0.9);
     clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 25%);
+}
+
+/*---------------------------------------------Page Title-----*/
+
+.page-title h1 {
+    font-size: 4em;
 }
 
 
