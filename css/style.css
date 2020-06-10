@@ -1,7 +1,10 @@
+
+/*---------------------------------------------Fonts from Google Fonts for full website-----*/
+
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap');
 
-/*---------------------------------------------Font & Colours-----*/
+/*---------------------------------------------General site wide-----*/
 
 * {
     color: #f7f8fa;
@@ -19,9 +22,6 @@ body {
 a:hover {
     text-decoration: none;
 }
-
-
-
 
 /*---------------------------------------------Background-----*/
 
@@ -172,6 +172,8 @@ nav {
 
 /*---------------------------------------------Footer-----*/
 
+
+/* Moves to footer on tablets and phones, as in navbar on desktop screens */
 footer .social-container {
     display: none;
 }

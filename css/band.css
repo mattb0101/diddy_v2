@@ -56,8 +56,8 @@ footer {
 .band-member-select {
     grid-area: 3 / 1 / span 1 / span 2;
     display: inline-grid;
-    grid-template-columns: repeat(6, auto);
-    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(6, 18vmin);
+    grid-template-rows: repeat(4, 18vmin);
     column-gap: 1vmin;
     row-gap: 1vmin;
     width: auto;
@@ -75,8 +75,8 @@ footer {
 .full-image {
     align-items: center;
     justify-content: center;
-    width: 15vmin;
-    height: 15vmin;
+    width: 18vmin;
+    height: 18vmin;
     border-radius: 5%;
     display: flex;
 }
@@ -84,23 +84,23 @@ footer {
 .full-image {
     grid-area: 2 / 2 / span 2 / span 2;
     position: relative;
-    height: calc(2 * 15vmin);
-    width: calc(2 * 15vmin);
+    height: calc(2 * 18vmin);
+    width: calc(2 * 18vmin);
     background-color: rgba(174, 167, 167, 0.5); 
     border-radius: 50%;
 }
 
 .full-image span {
     position: absolute;
-    height: calc(2 * 15vmin);
-    width: calc(2 * 15vmin);
+    height: calc(2 * 18vmin);
+    width: calc(2 * 18vmin);
     border-radius: 50%;
     border: 10px solid rgb(174, 167, 167);
 }
 
 .full-image span.full-image-blank {
     max-height: 100%;
-    font-size: calc(2 * 11vmin);
+    font-size: calc(2 * 18vmin);
     font-family: 'Luckiest Guy', cursive;       
     text-align: center;
     line-height: normal;
@@ -109,33 +109,34 @@ footer {
 .member-name {
     grid-area: 2 / 4 / span 1 / span 2;
     position: relative;
-    width: calc(2 * 15.5vmin);
+    width: calc(2 * 18vmin);
     height: 15vmin;
     color: #f7f8fa;
 }
 
 .member-name span {
     position: absolute; 
-    font-size: 55px;
+    font-size: 6vmin;
     text-transform: uppercase;
     font-family: "Luckiest Guy", sans-serif;
     font-weight: bold;
-    width: calc(2 * 15vmin);
+    width: calc(2 * 18vmin);
     text-align: center;
 }
 
 .member-info {
-    grid-area: 2 /4 / span 2 / span 2;
+    grid-area: 2 /4 / span 1 / span 2;
     position: relative;
-    width: calc(2 * 15vmin);
-    margin-top: 6vmin;
+    width: calc(2 * 18vmin);
+    margin-top: 7vmin;
 }
 
 .member-info span {
     position: absolute;
-    width: calc(2 * 15vmin);
+    width: calc(2 * 18vmin);
     overflow: auto;
     padding: 1vh;
+    font-size: 2vmin;
 }
 
 .member-info .instrument {
@@ -180,9 +181,9 @@ footer {
     transition: opacity 1000s;
 }
 
-.full-image-dave {background-image: url("../img/dave/dave-3-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
+.full-image-dave {background-image: url("../img/dave/dave-full-image-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
 .full-image-will {background-image: url("../img/will/will-full-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
-.full-image-ryan {background-image: url("../img/dave/dave-3-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
+.full-image-ryan {background-image: url("../img/ryan/ryan-full-image.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
 .full-image-matt-s {background-image: url("../img/matt-s/matt-full-image.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
 .full-image-belle {background-image: url("../img/belle/belle-full-image.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
 .full-image-gary {background-image: url("../img/gary/gary-full-image.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
