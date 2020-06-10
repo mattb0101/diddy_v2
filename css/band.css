@@ -100,11 +100,11 @@ footer {
 
 .full-image span.full-image-blank {
     max-height: 100%;
-    font-size: calc(2 * 18vmin);
+    font-size: calc(2 * 14vmin);
     font-family: 'Luckiest Guy', cursive;       
     text-align: center;
     line-height: normal;
-    vertical-align: middle;
+    
 }
 .member-name {
     grid-area: 2 / 4 / span 1 / span 2;
