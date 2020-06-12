@@ -25,6 +25,17 @@ I started with making a fair few wireframe designs, i could have done these usin
 <img src="./img/wireframes/wireframe2.jpg" width="450" height="350">
 <img src="./img/wireframes/wireframe3.jpg" width="450" height="175">
 
+While going through the design, one of the biggest parts was the band member selection. As the band is into gaming and the name is based around Diddy Kong Racing and Mario Kart, i thought that for the page telling about the band, it would work well like the character selection from Mario Kart.
+
+<img src="./img/selection_screen.png" width="200" height="125">
+
+The idea was great, but there were some issues with the layout, as i was only working with HTML and CSS, the ideal in my head was to click on a member and their information show. Clicking seems to be only available with JavaScript, so i had to do lots of thinking with hover and transition delays. I built this up but then you couldnt get to the links for that member without hovering over someone else, so a layout redesign had to happen.
+
+<img src="./img/wireframes/wireframe4.jpg" width="250" height="400">
+<img src="./img/wireframes/wireframe5.jpg" width="400" height="250">
+
+I drew out the above two wireframes, with the information in the centre and trying to stagger 9 boxes around it, these were really helpful and let me draw the grid layout behind them to make it easy to work out how to code it. I went with the landscape design so to fit on most desktop style displays best. Once this went in, i was happy with the layout, not perfectly how i wanted it, but worked well to what the idea was. 
+
 Being able to talk and get opinions from everyone made it easier to develop further designs and take all the features that were good, this is why there is a lot of different wireframes. There was some settling on ideas, but as the project developed from my end, some things didnt work, or werent as user friendly as possible, so i have taken the ideas and tweaked them to make things sit better.
 
 
@@ -34,6 +45,7 @@ Being able to talk and get opinions from everyone made it easier to develop furt
 
 **Navbar**
 - Used across all pages, showing the available pages on the site and incorporating the band logo along with social media links.
+- Allows the User to navigate Home, The Band, Gallery and a Contact Page.
 - At Tablet size devices and smaller, the social links move to the footer.
 - At Phone size devices the menu collapses into a slide down menu.
 
@@ -43,11 +55,12 @@ Being able to talk and get opinions from everyone made it easier to develop furt
 
 **The Band** 
 - Basic Information about the band, to show their origins and about them.
-- Band members, with a 9 peice band this enabled this to be a large part, taking inspiration from a 'Mario Kart' character selection screen. 
+- Band members, with a 9 peice band this enabled this to be a large part, taking inspiration from a 'Mario Kart' character selection screen.
+- On tablet and phone sized screens, this changes to a list style layout with a section per member, as the selection box wouldnt be as usable on smaller screens. 
 
 **Gallery** 
 - Showing a small slideshow or images. A slideshow was an idea liked by the band a lot.
-- A set of images of the band.
+- A set of images of the band. Set up with 3 columns on larger screens and 2 columns on smaller screens.
 - A short viedo that was taken from a rehersal with sound.
 
 **Contact Us**
@@ -60,6 +73,9 @@ Being able to talk and get opinions from everyone made it easier to develop furt
 
 **Upcoming Shows**
 - Possible calendar with upcoming shows (currently there are none so this couldnt be made)
+
+**Better Pictures**
+- During the Virus outbreak, we havent really been able to take photos or get together to get similar layout photos, and some band members havent sent them through. Proper pictures with the same formats to give the website more continuity would be good.
 
 **Music**
 - Possibly some more music samples or updates of any recording/ music that might be coming out.
@@ -77,10 +93,10 @@ Being able to talk and get opinions from everyone made it easier to develop furt
 - CSS works alongside HTML to add style and effects to the website.
 
 #### [Bootstrap](https://getbootstrap.com/)
-- Bootstrap is a free, open source front end framework, that is directed at mobile first web development. It mainly contains CSS and has the option for some JavaScript.
+- Bootstrap is a free, open source front end framework, that is directed at mobile first web development. It mainly contains CSS and has the option for some JavaScript. Used a little for the slideshow/carousel.
 
 #### [Github](https://github.com/)
-- A software development sharing platform used for hosting and sharing projects for open source, or team based projects.
+- A software development sharing platform used for hosting and sharing projects for open source, or team based projects. 'I was using github so other people can see, its easily hostable and can deploy easily.
 
 #### [Gitpod](https://www.gitpod.io/)
 - An IDE (Integrated Development Environment) for GitHub that lets you quickly launch your projects in a ready-to-code environment.
@@ -89,20 +105,28 @@ Being able to talk and get opinions from everyone made it easier to develop furt
 - A free and open source version control system that handles all projects and keeps version history in check.
 
 #### [Font Awesome](https://fontawesome.com/)
-- A font and icon based toolkit based on CSS - Wikipedia
+- A font and icon based toolkit based on CSS - Wikipedia. I used font awesome icons mainly for social media links and the small screen menu. I would have liked to add more in, like instruments, but they werent available in the free version. 
 
 #### [Affinity Designer](https://affinity.serif.com/en-gb/designer/)
-- Vector graphics design and editing software. 
+- Vector graphics design and editing software. This was used for making the logo, tried making this in CSS, but getting the affects wasnt easy so i made it here, which made it an easily responsive design across the site. 
 
 #### [Affinity Photo](https://affinity.serif.com/en-gb/photo/)
-- Raster Grahics design and editing software.
+- Raster Grahics design and editing software. Touching up and cropping photos to work in the way i wanted them to, mainly for the band selection screen, but also cropping them to fit better across the website. 
 
 #### [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
- - A set of Web developer tools built into Google Chrome that allows you to make changes to a website on the fly for testing purposes and be able to diagnose issues.
+ - A set of Web developer tools built into Google Chrome that allows you to make changes to a website on the fly for testing purposes and be able to diagnose issues. I used this for a lot of the testing, being able to turn off certain CSS features and add in new ones with none of the actual code changing. This let me try things and didnt break the source code. 
 
 
 
 ## Testing
+
+As a little bit of a perfectionist, i was testing this throughout the project, making changes or adding content and seeing if they worked out how they seemed in my head. Being part of the band and being in touch with them everyday made testing much easier, able to send pictures or videos of what I'd done today and get any suggestions on it. 
+
+At about 60-70% through the project, I used the code institute module form to see where i was and what i had to do still. From this, i ran all my code through validators. The [HTML Validator](https://validator.w3.org/) was very useful and most pages ran through with no problem. All the pages had a warning about using h2-h6 headers in a section, but i knew all my sections that needed had headers, just maybe not directly inside that section. On the Band page, i had put a paragraph element inside a span element which is not useable so i moved these around and adjusted the CSS code to match these changes.
+
+The [CSS Pages](https://jigsaw.w3.org/css-validator/) went through mostly fine too. There was a couple of unrecognised coding parts, in the media queries, I'd used 'max-device-width', this just wanted the device taking out of it. I had put 'auto' on a line-height, but this wanted just taking out as it wasnt working and the standard line height was working fine. I tested both these again as i got towards submission time and all was working great apart from the header warnings. 
+
+
 
 ## Deployment
 
@@ -122,7 +146,13 @@ Being able to talk and get opinions from everyone made it easier to develop furt
 
 ### ***Media***
 - All the photos and videos used on this site were taken or sent by members of the band so are all ok to use on the page.
+- The Logo was created by me using Affinity Designer, Google Fonts and the vs logo from [here](https://www.subpng.com/png-8fe1jd/download.html)
 
 ### ***Acknowledgements***
 
-- I received inspiration for this project from X
+- bands
+- Chris
+- Steph and Kyra
+- The Band
+- Family
+- Gerry
