@@ -118,7 +118,7 @@ Being able to talk and get opinions from everyone made it easier to develop furt
 
 
 
-## Testing
+## **Testing**
 
 As a little bit of a perfectionist, i was testing this throughout the project, making changes or adding content and seeing if they worked out how they seemed in my head. Being part of the band and being in touch with them everyday made testing much easier, able to send pictures or videos of what I'd done today and get any suggestions on it. 
 
@@ -126,9 +126,33 @@ At about 60-70% through the project, I used the code institute module form to se
 
 The [CSS Pages](https://jigsaw.w3.org/css-validator/) went through mostly fine too. There was a couple of unrecognised coding parts, in the media queries, I'd used 'max-device-width', this just wanted the device taking out of it. I had put 'auto' on a line-height, but this wanted just taking out as it wasnt working and the standard line height was working fine. I tested both these again as i got towards submission time and all was working great apart from the header warnings. 
 
+### ***User Testing***
+
+With being a part of the band, i was able to send through videos and images as i coded to get feedback. At about 60-70% i sent a version of the site from github pages to everyone for them to run through and test the links and try it on all devices to see what was happening. A lot of the feedback was given, the first issue was the images were not showing on the deployed page. Looking into it the path for images was '../', which had worked fine all the way through, but during deployment it didnt. Changing the link to './' worked as github and gitpod seemed to look at the paths slightly differently. Most things were working fine and the users had no issues, mainly spelling errors. The main issue was with the member selection screen, at the time it was just hovering, but some 'about me' text needed to be scrolled and links could not be clicked as the info disapeared when you moved off. This was what lead to the re-looking at the screens design, (see the UX / Wireframes section), for the users to be able to see and use all the data.
+
+Close to the end of the project i sent a link through to my family and some other friends that were not involved in the creation process to see how things responded. Again, most things were working fine and there was no issues that stopped the users navigating the site or anything that broke links. Although i had tested this across what screen sizes i could, my Dad had some issues with his laptop, (Lenova Thinkpad). I looked up the screen resolution and used the Chrome tools to simulate this, there were issues were certain elements were crossing over each other as the height to width ratio was a lot different from a desktop PC or a tablet. As i am using viewport height and widths, I adjusted these and tested the outcomes across as many screen resolutions as i could to make sure things worked properly. 
+
+The user feedback was good, the band was impressed with the outcome as were my family. My little brother especially liked how the band selection screen worked, so hopefully this will be a good user feature.
+
+I ran through the site a lot on my own too, thinking of every outcome and the visual display too. As i ran though a made a list of anything the didnt look right or didnt 100% work how i wanted it to and noted these down. Afterwards i worked through the list to fix all the issues, making sure to cover everything i could see. 
+
+### ***Mentor Advice***
+
+Fill this in after meeting with Gerry.
 
 
 ## Deployment
+
+I have deployed this using GitHub Pages using the following process;
+
+1. From my github account [https://github.com/mattb0101](https://github.com/mattb0101)
+1. New Repository was created, [https://github.com/mattb0101/diddy_vs_thekingdom](https://github.com/mattb0101/diddy_vs_thekingdom). This was using a template from the Code Institute to build off [https://github.com/Code-Institute-Org/gitpod-full-template](https://github.com/Code-Institute-Org/gitpod-full-template).
+1. To be able to view this i had to follow the following steps.
+    1. From the Repository, click the setting button.
+    1. Scroll down to the Github Pages Section.
+    1. Change the source from 'None' to the branch to use. I have been using 'master'.
+    1. Scroll back down after saving, and the link will be available. [https://mattb0101.github.io/diddy_vs_thekingdom/](https://mattb0101.github.io/diddy_vs_thekingdom/)
+1. The Code can be run from Github, using Gitpod by pressing the 'Gitpod' button, or cloning, downloading and forking the code. 
 
 
 ## **Credits**
