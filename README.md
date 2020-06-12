@@ -174,9 +174,9 @@ I have deployed this using GitHub Pages using the following process;
 
 ### ***Acknowledgements***
 
-- bands
-- Chris
-- Steph and Kyra
-- The Band
-- Family
-- Gerry
+- During research i took inspiration from similar style professional bands. The main 2 that i took inspiration from were [Reel Big Fish](http://www.reel-big-fish.com/) and [Popes of Chillitown](https://popesofchillitown.com/). 
+- MY cousin [Chris Baum](https://github.com/cbaum86) for being the biggest help and support with this. As a web designer himself, able to look at the project, gives me hints and tips and help when one line of code isnt working properly. Teaching me things and some best practice methods, adding a little colour into things when everything was black and white to me. 
+- My girlfriend Steph for putting up with me through all this but being really positive and supportive of my work. Obviously my cat Kyra....who decides to steal my mouse and re-write the code, but keeping me company most of the day too.
+- Main shout out to the band, we cant practice at the moment and are all missing that! They let me do this, helped a lot with getting pictures and doing loads of testing for me, and put up with constant videos that my geeky self posted and was happy....that probably meant nothing to them.
+- My Mum and Dad, for always supporting, asking how things were going, pushing me (even though Dad pushed a little hard sometimes...). But they've always been there and wanting me to succeed at all this and helping with anything i needed.
+- My mentor Gerry McBride for the support, staying calm which helped me and even through all this current worldwide mess, being really helpful and there when needed even with his own work. 
