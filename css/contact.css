@@ -81,6 +81,54 @@ label {
     font-size: 1.2em;
 }
 
+/*---------------------------------------------Success Box-----*/
+
+.popup {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    visibility: hidden;
+    opacity: 0; 
+}
+
+.popup:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-box {
+    margin: 30vh auto;
+    padding: 25px;
+    width: 350px;
+    position: relative;
+    background-color: rgba(174, 167, 167, 0.95);
+    border: 2px outset rgb(82, 79, 79);
+    border-radius: 2%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.modal-box h2 {
+    font-family: "Londrina Solid", cursive;
+    font-size: 48px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+
+
+
+
+
 /*---------------------------------------------Footer-----*/
 
 footer .social-container {

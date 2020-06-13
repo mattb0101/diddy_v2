@@ -53,15 +53,26 @@
         </div>
 
 		<section class="contact-form">
-			<form action="/action_page.php" method="get" target="_blank">
+			<form id="contact-form-main" action="#success-modal" method="get">
 				<label for="name">Name</label><br>
 				<input type="text" id="name" name="firstname" placeholder="Name" required><br>
 				<label for="email">Email Address</label><br>
 				<input type="email" id="email" name="email" placeholder="Email Address" required><br>
 				<label for="message">Message for us</label><br>
 				<textarea id="message" name="message" rows="5" style="width: 100%; height:40%"></textarea><br>
-				<input class="send-button" type="submit" value="Send">
+				<button class="send-button" type="submit" form="contact-form-main">Send</button>
             </form>
+
+            <div id="success-modal" class="popup">
+                <div class="modal-box">
+                    <h2>Thanks!</h2>
+                    <a class="close" href="#"><i class="fas fa-times"></i></a>
+                    <div class="content">
+                        <p>You're message/request has been sent! One of us will get back in touch with you ASAP!</p>
+                        <img src="./img/logo_invert_v3.svg" alt="Logo" style="width: 125px">
+                    </div>
+                </div>            
+            </div>
 		</section>
 
 		<div class="contact-header">To get in touch and find out more, talk about gigs or just a general chat! <br><br> Either
