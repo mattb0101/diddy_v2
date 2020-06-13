@@ -166,7 +166,8 @@ I have deployed this using GitHub Pages using the following process;
 - [CSS Tricks](https://css-tricks.com/) for a full teaching of the [grid system](https://css-tricks.com/snippets/css/complete-guide-grid/) as i decided to use this rather than bootstrap to be able to have full control over my layout. 
 - [w3schools](https://www.w3schools.com/) for hints and tips and furthering my knowledge of attributes and elements learnt so far.
 - [Navbar background](https://leaverou.github.io/css3patterns/#honeycomb)- A CSS pattern by Paul Salentiny to make a honeycomb style background. This takes inspiration from the 'Mario Kart' turtle shells. I have tweeked some of the colours but mainly a great piece of code by Paul.
-- [Stack Overflow]
+- Stack Overflow for some tips on lots of things, main uses were [temporarily disabling transition affects](https://stackoverflow.com/questions/11131875/what-is-the-cleanest-way-to-disable-css-transition-effects-temporarily#:~:text=To%20restore%20the%20transition%20as,%2F%2F%20Restore%20the%20transition%20elem.), [selecting all elements except the first one](https://stackoverflow.com/questions/4013701/select-all-tr-except-the-first-one) and [moving the bootstrap carousel titles](https://stackoverflow.com/questions/30125830/how-to-move-bootstrap-3-carousel-caption-below-images).
+- [Beyond Paper](https://beyond-paper.com/) this was what i used to understand [clip-path polygons](https://beyond-paper.com/clip-path-polygons-explained/). 
 
 ### ***Media***
 - All the photos and videos used on this site were taken or sent by members of the band so are all ok to use on the page.
