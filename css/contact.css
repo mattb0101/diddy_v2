@@ -3,14 +3,13 @@
 
 header {
     background: radial-gradient(circle farthest-side at 0% 50%,#f71e17 23.5%,rgba(240,166,17,0) 0)21px 30px,
-radial-gradient(circle farthest-side at 0% 50%,#8b0404 24%,rgba(240,166,17,0) 0)19px 30px,
-linear-gradient(#f71e17 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#f71e17 0)0 0,
-linear-gradient(150deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
-linear-gradient(30deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
-linear-gradient(90deg,#8b0404 2%,#d81a13 0,#d81a13 98%,#8b0404 0%)0 0 #d81a13;
-background-size: 40px 60px;
-
-border-bottom: 5px ridge #f5e1e1f6;
+                radial-gradient(circle farthest-side at 0% 50%,#8b0404 24%,rgba(240,166,17,0) 0)19px 30px,
+                linear-gradient(#f71e17 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#f71e17 0)0 0,
+                linear-gradient(150deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
+                linear-gradient(30deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
+                linear-gradient(90deg,#8b0404 2%,#d81a13 0,#d81a13 98%,#8b0404 0%)0 0 #d81a13;
+    background-size: 40px 60px;
+    border-bottom: 5px ridge #f5e1e1f6;
 }
 
 main {
@@ -19,28 +18,25 @@ main {
     align-items: center;
     }
 
-
 footer {
     background-color: rgba(0, 0, 0, 0.9);
     clip-path: polygon(0% 25%, 0% 100%, 100% 100%, 100% 0%);
 }
 
+/*---------------------------------------------Page Title-----*/
 
 .page-title {
-    grid-area: 1 / 1 / 1 / 3;
+    grid-area: 1 / 1 / span 1 / span 2;
 }
-
-/*---------------------------------------------Page Title-----*/
 
 .page-title h1 {
     font-size: 4em;
 }
 
-
 /*---------------------------------------------Side Text-----*/
 
 .contact-header {
-    grid-area: 2 / 2;
+    grid-area: 2 / 2 / span 1 /  span 1;
     max-width: 70%;
     padding: 2vmin;
     background-color: rgba(0, 0, 0, 0.6);
@@ -53,13 +49,14 @@ footer {
 
 form  {
     grid-area: 2 / 1;
+    position: relative;
     background-color: rgba(174, 167, 167, 0.5);
     border: 4px inset rgb(174, 167, 167);
     border-radius: 2%;
-    height: 50vh;
+    height: 55vh;
     width: 40vw;
     max-width: 500px;
-    padding: 2vw 2vw;      
+    padding: 2vmin 2vmin;      
 }
 
 form input,
@@ -74,6 +71,7 @@ form textarea {
     background-color: rgb(174, 167, 167);
     border: 2px outset rgb(174, 167, 167);
     width: 20%;
+    margin-top: 2vh;
 }  
 
 label {
@@ -83,6 +81,8 @@ label {
 
 /*---------------------------------------------Success Box-----*/
 
+/* The success box was built with inpiration and help from this code - https://codepen.io/peiche/pen/vhqym taking bits of it to make my own version with the form i have built*/
+
 .popup {
     position: absolute;
     top: 0;
@@ -90,6 +90,7 @@ label {
     left: 0;
     right: 0;
     background: rgba(0,0,0,0.5);
+    overflow: hidden;
     visibility: hidden;
     opacity: 0; 
 }
@@ -124,11 +125,6 @@ label {
     right: 25px;
 }
 
-
-
-
-
-
 /*---------------------------------------------Footer-----*/
 
 footer .social-container {
@@ -142,15 +138,15 @@ footer .social-container {
     justify-content: center;
 }
 
-
-
 /*---------------------------------------------Media Queries-----*/
+
+    /* Media Query to handle phone size screens */
 
 @media only screen and (max-width: 600px) {
     main {
-    grid-template-columns: auto;
-    grid-template-rows: 100px auto 1fr;
-    align-items: center;
+        grid-template-columns: auto;
+        grid-template-rows: 100px auto 1fr;
+        align-items: center;
     }
 
     footer {
@@ -170,15 +166,13 @@ footer .social-container {
                     linear-gradient(30deg,#20a31c 24%,#004b13 0,#004b13 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#004b13 0,#004b13 76%,#20a31c 0)0 0,
                     linear-gradient(90deg,#004b13 2%,#1e9919 0,#1e9919 98%,#004b13 0%)0 0 #1e9919;
         background-size: 40px 60px;
-
         border-bottom: 5px ridge #f5e1e1f6;
-
         padding: 100px 0 25px 25px;
     }
 
     .page-title {
-    grid-area: 1 / 1 / 1 / 1;
-    font-size: 80%;
+        grid-area: 1 / 1 / 1 / 1;
+        font-size: 80%;
     }
 
     .contact-header {
@@ -198,8 +192,8 @@ footer .social-container {
     }
 
     footer .social-container {
-    display: block;
-    grid-area: 1 / 1;
+        display: block;
+        grid-area: 1 / 1;
     }
 
     .website-about {
@@ -207,21 +201,23 @@ footer .social-container {
     }
 }
 
+    /* Media Query to handle tablet size screens */
+
 @media only screen 
 and (min-device-width: 601px) 
 and (max-device-width: 1024px) {
     footer .social-container {
-    display: block;
+        display: block;
     }
 
     main {
-    grid-template-columns: auto;
-    grid-template-rows: 100px auto 1fr;
-    align-items: center;
+        grid-template-columns: auto;
+        grid-template-rows: 100px auto 1fr;
+        align-items: center;
     }
 
     .page-title {
-    grid-area: 1 / 1 / 1 / 1;
+        grid-area: 1 / 1 / 1 / 1;
     }
 
     .contact-header {
@@ -233,11 +229,8 @@ and (max-device-width: 1024px) {
     form {
         grid-area: 3 / 1;
         width: 60vw;
+        height: 50vh;
     }
-
-    
-
-
 }
 
 

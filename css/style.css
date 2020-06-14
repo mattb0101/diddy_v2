@@ -41,7 +41,6 @@ body {
     -o-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
-    
 }
 
 /*---------------------------------------------Page Title-----*/
@@ -55,7 +54,6 @@ body {
     margin-top: 1vh;
 }
 
-
 /*---------------------------------------------Grid Layout-----*/
 
     /* This Grid layout is for a standard and setting it out across all pages, page specific changes on their own css sheet
@@ -66,6 +64,11 @@ header {
     grid-template-columns: auto 1fr 20vw;
     align-items: center;
     width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
 }
 
 main {
@@ -185,8 +188,6 @@ footer .social-container {
     justify-content: center;
 }
 
-
-
 /*---------------------------------------------Media Queries-----*/
 
     /* Media Query to handle phone size screens */
@@ -305,13 +306,12 @@ footer .social-container {
 
     .website-about {
         display: none;
-    }
-    
+    }   
 }
 
     /* Media Query to handle tablet size screens */
 
-@media only screen 
+@media only screen
 and (min-width: 601px) 
 and (max-width: 1024px) {
         /* Grid Layout */

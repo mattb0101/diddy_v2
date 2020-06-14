@@ -3,16 +3,16 @@
 
 header {
     background: radial-gradient(circle farthest-side at 0% 50%,#f71e17 23.5%,rgba(240,166,17,0) 0)21px 30px,
-radial-gradient(circle farthest-side at 0% 50%,#8b0404 24%,rgba(240,166,17,0) 0)19px 30px,
-linear-gradient(#f71e17 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#f71e17 0)0 0,
-linear-gradient(150deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
-linear-gradient(30deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
-linear-gradient(90deg,#8b0404 2%,#d81a13 0,#d81a13 98%,#8b0404 0%)0 0 #d81a13;
-background-size: 40px 60px;
-
-border-bottom: 5px ridge #f5e1e1f6;
+                radial-gradient(circle farthest-side at 0% 50%,#8b0404 24%,rgba(240,166,17,0) 0)19px 30px,
+                linear-gradient(#f71e17 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#f71e17 0)0 0,
+                linear-gradient(150deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
+                linear-gradient(30deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
+                linear-gradient(90deg,#8b0404 2%,#d81a13 0,#d81a13 98%,#8b0404 0%)0 0 #d81a13;
+    background-size: 40px 60px;
+    border-bottom: 5px ridge #f5e1e1f6;
 }
 
+/* Using a clip path on here to give the footer a slight angle, didnt want it straight with the theme of the site */
 footer {
     background-color: rgba(0, 0, 0, 0.9);
     clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 25%);
@@ -24,14 +24,14 @@ footer {
     font-size: 4em;
 }
 
-
 /*---------------------------------------------Slideshow-----*/
+
+    /* Built using bootstrap standard, but changing some of the layout. Using this as a popular idea with the band */
 
 #central-slideshow {
     height: 600px;
     width: 800px;
     margin: 3vh 0;
-
 }
 
 #central-slideshow img {
@@ -61,7 +61,6 @@ footer {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-image: none;
-    
 } 
 
 .carousel-control-prev-icon i,
@@ -75,7 +74,6 @@ footer {
 
 .gallery {
     clear: both;
-    line-height: auto;
     column-count: 3;
     column-gap: 1vw;
     padding: 1vh 0;
@@ -85,6 +83,7 @@ footer {
     width: 25vw;
     background-color: rgba(174, 167, 167, 0.5);
     margin: 1vmin;
+    /* These bits were put in, as a container with an image in was moving over to the next column, need to stop any background and borders moving https://stackoverflow.com/questions/7785374/how-to-prevent-column-break-within-an-element */
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;
@@ -124,9 +123,9 @@ footer .social-container {
     justify-content: center;
 }
 
-
-
 /*---------------------------------------------Media Queries-----*/
+
+    /* Media Query to handle phone size screens */
 
 @media only screen and (max-width: 600px) {
     main {
@@ -151,9 +150,7 @@ footer .social-container {
                     linear-gradient(30deg,#20a31c 24%,#004b13 0,#004b13 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#004b13 0,#004b13 76%,#20a31c 0)0 0,
                     linear-gradient(90deg,#004b13 2%,#1e9919 0,#1e9919 98%,#004b13 0%)0 0 #1e9919;
         background-size: 40px 60px;
-
         border-bottom: 5px ridge #f5e1e1f6;
-
         padding: 100px 0 25px 25px;
     }
 
@@ -189,17 +186,17 @@ footer .social-container {
     }
 
     .gallery {
-    column-count: 2;
+        column-count: 2;
     }
 
     .gallery-image {
-    width: 45vw;
-}
+        width: 45vw;
+    }
 
     .gallery-desc {
-    font-size: 0.7rem;
-    padding: 10px;
-    text-align: center;
+        font-size: 0.7rem;
+        padding: 10px;
+        text-align: center;
     }
 
     .website-about {
@@ -212,12 +209,14 @@ footer .social-container {
 
 }
 
+    /* Media Query to handle tablet size screens */
+
 @media only screen 
-and (min-device-width: 601px) 
-and (max-device-width: 1024px) {
-    main {
+and (min-width: 601px) 
+and (max-width: 1024px) {
+     main {
         grid-template-columns: auto;
-        grid-template-rows: 100px 60vh auto auto;
+        grid-template-rows: auto 60vh auto auto;
     }
 
     #central-slideshow {
@@ -246,12 +245,11 @@ and (max-device-width: 1024px) {
     }
 
     .gallery {
-    column-count: 2;
-    
+        column-count: 2;
     }
 
     .gallery-image {
-    width: 40vw;
+        width: 40vw;
     }
 
 }

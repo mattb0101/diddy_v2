@@ -3,14 +3,13 @@
 
 header {
     background: radial-gradient(circle farthest-side at 0% 50%,#f71e17 23.5%,rgba(240,166,17,0) 0)21px 30px,
-radial-gradient(circle farthest-side at 0% 50%,#8b0404 24%,rgba(240,166,17,0) 0)19px 30px,
-linear-gradient(#f71e17 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#f71e17 0)0 0,
-linear-gradient(150deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
-linear-gradient(30deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
-linear-gradient(90deg,#8b0404 2%,#d81a13 0,#d81a13 98%,#8b0404 0%)0 0 #d81a13;
-background-size: 40px 60px;
-
-border-bottom: 5px ridge #f5e1e1f6;
+                radial-gradient(circle farthest-side at 0% 50%,#8b0404 24%,rgba(240,166,17,0) 0)19px 30px,
+                linear-gradient(#f71e17 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#f71e17 0)0 0,
+                linear-gradient(150deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
+                linear-gradient(30deg,#f71e17 24%,#8b0404 0,#8b0404 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#8b0404 0,#8b0404 76%,#f71e17 0)0 0,
+                linear-gradient(90deg,#8b0404 2%,#d81a13 0,#d81a13 98%,#8b0404 0%)0 0 #d81a13;
+    background-size: 40px 60px;
+    border-bottom: 5px ridge #f5e1e1f6;
 }
 
 main {
@@ -47,12 +46,14 @@ footer {
     width: 60vw;
     font-size: 1.5em;
     margin-bottom: 5vh;
-
 }
 
 
 /*---------------------------------------------Band Members-----*/
 
+/* First bit with introduction to the grid system, lesson about it from my cousin Chris, some of this code taken from him.
+    Lots of code and CSS here, this is built aa a container with 9 images of the band, and a full image, member name and member about.
+    Originally, this was meant to use a click event on a member image, to change the content/display of the last 2 elements. From research, this could only be simply done with JavaScript and i didnt want to put something in that i didnt fully know how to use. Have done lots of work to get the elements to change based on a hover event. */
 .band-member-select {
     grid-area: 3 / 1 / span 1 / span 2;
     display: inline-grid;
@@ -81,6 +82,13 @@ footer {
     display: flex;
 }
 
+.band-member img {
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+}
+
 .full-image {
     grid-area: 2 / 2 / span 2 / span 2;
     position: relative;
@@ -98,6 +106,7 @@ footer {
     border: 10px solid rgb(174, 167, 167);
 }
 
+/* The blank is what shows when the screen loads, just a '?' */
 .full-image span.full-image-blank {
     max-height: 100%;
     font-size: calc(2 * 14vmin);
@@ -151,50 +160,149 @@ footer {
     margin-top: 10vh;
 }
 
-.band-member img {
-    max-width: 90%;
-    max-height: 90%;
-    width: auto;
-    height: auto;
-}
-
 
 /*---------------------------------------------Grid Allignment-----*/
 
-.band-member.dave {grid-area: 1 / 2 / span 1 / span 1;}
-.band-member.will {grid-area: 1 / 3 / span 1 / span 2; justify-self: center;}
-.band-member.ryan {grid-area: 1 / 5 / span 1 / span 1;}
-.band-member.matt-s {grid-area: 2 / 1 / span 1 / span 1;}
-.band-member.belle {grid-area: 2 / 6 / span 1 / span 1;}
-.band-member.gary {grid-area: 3 / 1 / span 1 / span 1;}
-.band-member.megan {grid-area: 3 / 6 / span 1 / span 1;}
-.band-member.laurie {grid-area: 4 / 2 / span 1 / span 2; justify-self: center;}
-.band-member.matt-b {grid-area: 4 / 4 / span 1 / span 2; justify-self: center;}
+    /* Grid box, the pictures needed to go around the centre elements, so needed to assign grid locations to them all */
+.band-member.dave {
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.band-member.will {
+    grid-area: 1 / 3 / span 1 / span 2; 
+    justify-self: center;
+}
+
+.band-member.ryan {
+    grid-area: 1 / 5 / span 1 / span 1;
+}
+
+.band-member.matt-s {
+    grid-area: 2 / 1 / span 1 / span 1;
+}
+
+.band-member.belle {
+    grid-area: 2 / 6 / span 1 / span 1;
+}
+
+.band-member.gary {
+    grid-area: 3 / 1 / span 1 / span 1;
+}
+
+.band-member.megan {
+    grid-area: 3 / 6 / span 1 / span 1;
+}
+
+.band-member.laurie {
+    grid-area: 4 / 2 / span 1 / span 2; 
+    justify-self: center;
+}
+
+.band-member.matt-b {
+    grid-area: 4 / 4 / span 1 / span 2; 
+    justify-self: center;
+}
+
+/*---------------------------------------------Band Member Images-----*/
+
+.band-member:hover {
+    background-color: rgba(174, 167, 167, 0.233);
+    cursor: pointer;
+}
+
+.band-member:hover img {
+    transform: scale(1.2);
+    filter: brightness(125%);
+    transition: all 0.3s ease-in;
+}
 
 /*---------------------------------------------Selection Change-----*/
 
+    /* This section is the code for changing the 'full-image', 'member-name' and 'member-info' elements. I have used opacity and visibility with transitions to make the elements change. The inspiration from this came from the Kevin Powell video with the drop down menu, i used the techniques i learnt here to support. This took an awful lot of testing!! */
+
         /*-------------------------Image Change-----*/
 
+/* Initial state - blank visible and all other backgrounds not. The long time on the transition is so that when the user hovers off the member image, the initial state doesnt come back in straight away, so they can read the information and will stay there if they move their mouse away. */
 .full-image-blank {
     opacity: 1;
-
     transition: opacity 1000s;
 }
 
-.full-image-dave {background-image: url("../img/dave/dave-full-image-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
-.full-image-will {background-image: url("../img/will/will-full-crop.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
-.full-image-ryan {background-image: url("../img/ryan/ryan-full-image.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
-.full-image-matt-s {background-image: url("../img/matt-s/matt-full-image.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
-.full-image-belle {background-image: url("../img/belle/belle-full-image.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
-.full-image-gary {background-image: url("../img/gary/gary-full-image.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
-.full-image-megan {background-image: url("../img/megan/megan_cropped.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
-.full-image-laurie {background-image: url("../img/laurie/laurie-full-image.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
-.full-image-matt-b {background-image: url("../img/matt/matt-full-image.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0; transition: opacity 1000s;}
+.full-image-dave {
+    background-image: url("../img/dave/dave-full-image-crop.jpg"); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    opacity: 0; 
+    transition: opacity 1000s;
+}
 
+.full-image-will {
+    background-image: url("../img/will/will-full-crop.jpg"); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    opacity: 0; 
+    transition: opacity 1000s;
+}
 
+.full-image-ryan {
+    background-image: url("../img/ryan/ryan-full-image.jpg"); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    opacity: 0; 
+    transition: opacity 1000s;
+}
+
+.full-image-matt-s {
+    background-image: url("../img/matt-s/matt-full-image.jpg"); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    opacity: 0; 
+    transition: opacity 1000s;
+}
+
+.full-image-belle {
+    background-image: url("../img/belle/belle-full-image.jpg"); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    opacity: 0; 
+    transition: opacity 1000s;
+}
+
+.full-image-gary {
+    background-image: url("../img/gary/gary-full-image.jpg"); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    opacity: 0; 
+    transition: opacity 1000s;
+}
+
+.full-image-megan {
+    background-image: url("../img/megan/megan_cropped.jpg"); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    opacity: 0; 
+    transition: opacity 1000s;
+}
+
+.full-image-laurie {
+    background-image: url("../img/laurie/laurie-full-image.jpg"); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    opacity: 0; 
+    transition: opacity 1000s;
+}
+
+.full-image-matt-b {
+    background-image: url("../img/matt/matt-full-image.jpg"); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    opacity: 0; 
+    transition: opacity 1000s;
+}
+
+/* This makes the initial image dissapear and the image related to the band member hovered show */
 .band-member:hover ~ .full-image > .full-image-blank {
     opacity: 0;
-
     transition: opacity 0s;
 } 
 
@@ -208,10 +316,12 @@ footer {
 .band-member.laurie:hover ~ .full-image > .full-image-laurie,
 .band-member.matt-b:hover ~ .full-image > .full-image-matt-b  {
     opacity: 1;
-
     transition: opacity 0s;
 }
 
+/* This stops the long transitions happening on other elements when a different band member is hovered over, restarting all the elements transitions.
+https://stackoverflow.com/questions/11131875/what-is-the-cleanest-way-to-disable-css-transition-effects-temporarily#:~:text=To%20restore%20the%20transition%20as,%2F%2F%20Restore%20the%20transition%20elem.
+https://stackoverflow.com/questions/4013701/select-all-tr-except-the-first-one */
 .band-member.dave:hover ~ .full-image > span:not(:first-child),
 .band-member.will:hover ~ .full-image > span:not(:first-child),
 .band-member.ryan:hover ~ .full-image > span:not(:first-child),
@@ -226,10 +336,10 @@ footer {
 
         /*-------------------------Name Change-----*/
 
+/* Same layout as above for the member name except that I've used visibilty aswell. With the pictures is doesnt matter if they are on top, but the names and info have some links in (instagram) and they cant be clicked is there are other elements ontop, so needed to make them not show at all. kept the opacity as needed the duration transition */
 .member-name-blank {
     visibility: visible;
     opacity: 1;
-
     transition: all 1000s;
 }
 
@@ -244,14 +354,12 @@ footer {
 .member-name-matt-b {
     visibility: hidden;
     opacity: 0;
-
     transition: all 1000s;
 }
 
 .band-member:hover ~ .member-name > .member-name-blank {
     visibility: hidden;
     opacity: 0;
-
     transition: all 0s;
 } 
 
@@ -266,7 +374,6 @@ footer {
 .band-member.matt-b:hover ~ .member-name > .member-name-matt-b {
     visibility: visible;
     opacity: 1;
-    
     transition: all 0s;
 } 
 
@@ -284,11 +391,9 @@ footer {
 
         /*-------------------------Info Change-----*/
 
-
 .member-info-blank {
     visibility: visible;
     opacity: 1;
-
     transition: all 1000s;
 }
 
@@ -303,14 +408,12 @@ footer {
 .member-info-matt-b {
     visibility: hidden;
     opacity: 0;
-
     transition: all 1000s;
 }
 
 .band-member:hover ~ .member-info > .member-info-blank {
     visibility: hidden;
     opacity: 0;
-
     transition: all 0s;
 } 
 
@@ -325,7 +428,6 @@ footer {
 .band-member.matt-b:hover ~ .member-info > .member-info-matt-b {
     visibility: visible;
     opacity: 1;
-
     transition: all 0s;
 } 
 
@@ -341,24 +443,9 @@ footer {
     transition: none !important;
 }
 
-
-
-.band-member:hover {
-    background-color: rgba(174, 167, 167, 0.233);
-    cursor: pointer;
-}
-
-.band-member:hover img {
-    transform: scale(1.2);
-    filter: brightness(125%);
-
-    transition: all 0.3s ease-in;
-}
-
-
-
 /*---------------------------------------------Phone Size Images-----*/
 
+/* Phone and tablet had different layouts, not using the selection screen, but more of a list so needed different layouts */
 .band-member-phone {
     display: none;
 }
@@ -393,7 +480,6 @@ footer {
     font-size: 5vmin;
     background: transparent;
     padding-bottom: 1vh;
-    /* margin-top: 1vh; */
 }
 
 hr {
@@ -434,6 +520,8 @@ footer .social-container {
 }
 
 /*--------------------------------------------Media Queries-----*/
+
+    /* Media Query to handle phone size screens */
 
 @media only screen and (max-width: 600px) {
     .logo-nav {
@@ -503,6 +591,8 @@ footer .social-container {
 
 }
 
+    /* Media Query to handle tablet size screens */
+
 @media only screen 
 and (min-width: 601px) 
 and (max-width: 1024px) {
@@ -546,5 +636,4 @@ and (max-width: 1024px) {
     footer .social-container {
         display: block;
     }
-
 }

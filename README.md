@@ -138,7 +138,13 @@ I ran through the site a lot on my own too, thinking of every outcome and the vi
 
 ### ***Mentor Advice***
 
-Fill this in after meeting with Gerry.
+I am always worried and always overthinking, so my last meeting with Gerry helped, he pointed me in the right direction and what things to change and tidy up.
+
+Main thing was answered about the contact page and if the form should send anywhere. Gerry said that it shouldnt but there should be a popup of success, so this was built in afterwards, learning and having a popup like modal display in the middle of the screen. 
+
+I have mainly tidied things up since this meeting, tidying up any gaps in the code, combining classes, and putting an awful lot of notes in to explain the thought process of things. 
+
+We were both very happy with the working of the site, and after all these changes, i did a last run through of all the pages and elements in all responsive sreen sizes to check it was working before i handed the project in. 
 
 
 ## Deployment
@@ -167,7 +173,8 @@ I have deployed this using GitHub Pages using the following process;
 - [w3schools](https://www.w3schools.com/) for hints and tips and furthering my knowledge of attributes and elements learnt so far.
 - [Navbar background](https://leaverou.github.io/css3patterns/#honeycomb)- A CSS pattern by Paul Salentiny to make a honeycomb style background. This takes inspiration from the 'Mario Kart' turtle shells. I have tweeked some of the colours but mainly a great piece of code by Paul.
 - Stack Overflow for some tips on lots of things, main uses were [temporarily disabling transition affects](https://stackoverflow.com/questions/11131875/what-is-the-cleanest-way-to-disable-css-transition-effects-temporarily#:~:text=To%20restore%20the%20transition%20as,%2F%2F%20Restore%20the%20transition%20elem.), [selecting all elements except the first one](https://stackoverflow.com/questions/4013701/select-all-tr-except-the-first-one) and [moving the bootstrap carousel titles](https://stackoverflow.com/questions/30125830/how-to-move-bootstrap-3-carousel-caption-below-images).
-- [Beyond Paper](https://beyond-paper.com/) this was what i used to understand [clip-path polygons](https://beyond-paper.com/clip-path-polygons-explained/). 
+- [Beyond Paper](https://beyond-paper.com/) this was what i used to understand [clip-path polygons](https://beyond-paper.com/clip-path-polygons-explained/).
+- [Codepen](https://codepen.io/peiche/pen/vhqym) - Used this code to help build the modal/success popup when the user sends something from the contact page.
 
 ### ***Media***
 - All the photos and videos used on this site were taken or sent by members of the band so are all ok to use on the page.
@@ -176,8 +183,10 @@ I have deployed this using GitHub Pages using the following process;
 ### ***Acknowledgements***
 
 - During research i took inspiration from similar style professional bands. The main 2 that i took inspiration from were [Reel Big Fish](http://www.reel-big-fish.com/) and [Popes of Chillitown](https://popesofchillitown.com/). 
-- MY cousin [Chris Baum](https://github.com/cbaum86) for being the biggest help and support with this. As a web designer himself, able to look at the project, gives me hints and tips and help when one line of code isnt working properly. Teaching me things and some best practice methods, adding a little colour into things when everything was black and white to me. 
+- My cousin [Chris Baum](https://github.com/cbaum86) for being the biggest help and support with this. As a web designer himself, able to look at the project, gives me hints and tips and help when one line of code isnt working properly. Teaching me things and some best practice methods, adding a little colour into things when everything was black and white to me. 
 - My girlfriend Steph for putting up with me through all this but being really positive and supportive of my work. Obviously my cat Kyra....who decides to steal my mouse and re-write the code, but keeping me company most of the day too.
 - Main shout out to the band, we cant practice at the moment and are all missing that! They let me do this, helped a lot with getting pictures and doing loads of testing for me, and put up with constant videos that my geeky self posted and was happy....that probably meant nothing to them.
 - My Mum and Dad, for always supporting, asking how things were going, pushing me (even though Dad pushed a little hard sometimes...). But they've always been there and wanting me to succeed at all this and helping with anything i needed.
+- Connie Higgins at learning people, for being a great support person since day one of the course, always positive and helping me push forward, always brings a smile to my face!
+- Other students on this course, helping and happy to share their projects for inspiration. Definitley used them with help for the README when i didnt have a clue where to go with it!
 - My mentor Gerry McBride for the support, staying calm which helped me and even through all this current worldwide mess, being really helpful and there when needed even with his own work. 
