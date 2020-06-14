@@ -140,7 +140,7 @@ footer {
     margin-top: 7vmin;
 }
 
-.member-info span {
+.member-info p {
     position: absolute;
     width: calc(2 * 18vmin);
     overflow: auto;
@@ -149,12 +149,18 @@ footer {
 }
 
 .member-info .instrument {
+    display: inline-block;
     font-size: 3vmin;
+    text-decoration: underline;
+    text-transform: uppercase;
     text-align: center;
-    margin-bottom: 1vh;
+    margin-bottom: 1vh;    
+    margin: 0;
+    font-family: "Luckiest Guy", cursive;
+    width: 100%;
 }
 
-.member-info span.member-info-blank {
+.member-info p.member-info-blank {
     color: #f7f8fa;
     text-align: center;
     margin-top: 10vh;
@@ -229,7 +235,7 @@ footer {
 }
 
 .full-image-dave {
-    background-image: url("../img/dave/dave-full-image-crop.jpg"); 
+    background-image: url("../img/dave/dave-full-image.jpg"); 
     background-repeat: no-repeat; 
     background-size: cover; 
     opacity: 0; 
@@ -237,7 +243,7 @@ footer {
 }
 
 .full-image-will {
-    background-image: url("../img/will/will-full-crop.jpg"); 
+    background-image: url("../img/will/will-full-image.jpg"); 
     background-repeat: no-repeat; 
     background-size: cover; 
     opacity: 0; 
@@ -277,7 +283,7 @@ footer {
 }
 
 .full-image-megan {
-    background-image: url("../img/megan/megan_cropped.jpg"); 
+    background-image: url("../img/megan/megan-full-image.jpg"); 
     background-repeat: no-repeat; 
     background-size: cover; 
     opacity: 0; 
@@ -431,15 +437,15 @@ https://stackoverflow.com/questions/4013701/select-all-tr-except-the-first-one *
     transition: all 0s;
 } 
 
-.band-member.dave:hover ~ .member-info > span:not(:first-child),
-.band-member.will:hover ~ .member-info > span:not(:first-child),
-.band-member.ryan:hover ~ .member-info > span:not(:first-child),
-.band-member.matt-s:hover ~ .member-info > span:not(:first-child),
-.band-member.belle:hover ~ .member-info > span:not(:first-child),
-.band-member.gary:hover ~ .member-info > span:not(:first-child),
-.band-member.megan:hover ~ .member-info > span:not(:first-child),
-.band-member.laurie:hover ~ .member-info > span:not(:first-child),
-.band-member.matt-b:hover ~ .member-info > span:not(:first-child) {
+.band-member.dave:hover ~ .member-info > p:not(:first-child),
+.band-member.will:hover ~ .member-info > p:not(:first-child),
+.band-member.ryan:hover ~ .member-info > p:not(:first-child),
+.band-member.matt-s:hover ~ .member-info > p:not(:first-child),
+.band-member.belle:hover ~ .member-info > p:not(:first-child),
+.band-member.gary:hover ~ .member-info > p:not(:first-child),
+.band-member.megan:hover ~ .member-info > p:not(:first-child),
+.band-member.laurie:hover ~ .member-info > p:not(:first-child),
+.band-member.matt-b:hover ~ .member-info > p:not(:first-child) {
     transition: none !important;
 }
 
