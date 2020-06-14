@@ -29,8 +29,8 @@ footer {
     /* Built using bootstrap standard, but changing some of the layout. Using this as a popular idea with the band */
 
 #central-slideshow {
-    height: 600px;
-    width: 800px;
+    height: 60vmin;
+    width: 80vmin;
     margin: 3vh 0;
 }
 
@@ -49,13 +49,13 @@ footer {
 }
 
 .carousel-caption h5 {
-    font-size: 2em;
+    font-size: 3vmin;
     text-transform: uppercase;
     font-weight: bold;
 }
 
 .carousel-caption p {
-    font-size: 1.3em;
+    font-size: 2vmin;
 }
 
 .carousel-control-prev-icon,
